@@ -616,3 +616,12 @@ Example:
 </a>
 ```
 
+### Specify multiple language versions of a webpage
+
+To specify multiple language versions of a webpage, use the `hreflang` attribute in the `<link>` tag within the `<head>` section.
+
+Example:
+```html
+<link rel="alternate" href="https://example.com/en" hreflang="en" />
+<link rel="alternate" href="https://example.com/es" hreflang="es" />
+```
