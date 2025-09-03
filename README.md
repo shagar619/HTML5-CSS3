@@ -230,3 +230,96 @@ Example:
 <!-- This is a comment -->
 ```
 
+### Hyperlink in HTML
+
+A hyperlink is created using the `<a>` tag (anchor tag).
+
+Syntax:
+```html
+<a href="URL">Link Text</a>
+```
+
+- `href` → (hypertext reference) defines the destination URL.
+- The text (or image) between `<a>` and `</a>` is clickable.
+
+#### ⚡ Common Attributes of Hyperlinks
+
+**1. target**
+
+Controls how the link opens.
+```html
+<a href="https://example.com" target="_blank">Open in new tab</a>
+```
+
+- `_self` → default (opens in same tab).
+- `_blank` → opens in a new tab.
+
+**2. rel**
+
+Specifies the relationship between the current document and the linked document.
+```html
+<a href="https://example.com" rel="noopener">Secure link</a>
+```
+- `noopener` → prevents the linked document from accessing the opener window.
+- `noreferrer` → prevents the browser from sending the referring page's URL.
+
+**3. download**
+
+Indicates that the link is for downloading a resource.
+```html
+<a href="file.pdf" download>Download PDF</a>
+```
+
+- `download` → prompts the user to save the linked URL instead of navigating to it.
+
+**4. title**
+
+Tooltip when hovering over the link.
+```html
+<a href="https://example.com" title="Visit Example">Example</a>
+```
+
+**5. Linking to a Section on the Same Page**
+
+To link to a specific section within the same page, use the `href` attribute with a hash (`#`) followed by the section's `id`.
+
+Example:
+```html
+<a href="#section1">Go to Section 1</a>
+
+<section id="section1">
+  <h2>Section 1</h2>
+  <p>Content of section 1.</p>
+</section>
+```
+
+**6. Email & Phone Links**
+
+**Email Links**
+
+Use the `mailto:` scheme in the `href` attribute to create an email link.
+
+Example:
+```html
+<a href="mailto:example@example.com">Send Email</a>
+```
+
+**Phone Links**
+
+Use the `tel:` scheme in the `href` attribute to create a phone link.
+
+Example:
+```html
+<a href="tel:+1234567890">Call Us</a>
+```
+
+**7. Using Images as Links**
+
+To use an image as a link, place an `<img>` tag inside an `<a>` tag.
+
+Example:
+```html
+<a href="https://example.com">
+  <img src="image.jpg" alt="Example Image">
+</a>
+```
