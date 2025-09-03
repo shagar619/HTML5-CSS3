@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD012 MD026 MD001 MD022 MD032 MD029 MD019 MD034 MD031 MD047 MD040 MD009 MD058 MD024 MD033 MD041 MD045 MD007  -->
+<!-- markdownlint-disable MD012 MD026 MD001 MD022 MD032 MD029 MD019 MD034 MD031 MD047 MD040 MD009 MD058 MD024 MD033 MD041 MD045 MD007 MD036  -->
 
 <div>
 
@@ -148,3 +148,85 @@ Example:
   </body>
 </html>
 ```
+
+
+### HTML Tag
+
+A tag is the building block of HTML.
+
+- Tags are keywords wrapped in angle brackets (`<>`).
+- Most tags come in pairs: opening tag `<tagname>` and closing tag `</tagname>`.
+- Some tags are self-closing (e.g., `<img />`, `<br />`, `<input />`).
+
+✅ Example:
+```html
+<p>This is a paragraph.</p>
+```
+Here:
+- `<p>` = opening tag
+- `</p>` = closing tag
+
+### HTML Element
+
+An element is a complete unit in HTML, consisting of a start tag, content, and an end tag.
+
+Example:
+```html
+<p>This is a paragraph.</p>
+```
+- `<p>` is the start tag.
+- `This is a paragraph.` is the content.
+- `</p>` is the end tag.
+
+> 👉 So: Tag = label, Element = complete structure.
+
+**Block-level elements**
+
+Block-level elements start on a new line and take up the full width available. Block-level elements are the building blocks of page layout. Examples include: `<p>`, `<div>`, `<section>`, `<article>`, `<nav>`, `<header>`, `<footer>`.
+
+**Inline elements**
+
+Inline elements do not start on a new line and only take up as much width as necessary. Inline elements are typically used for small pieces of content within block-level elements. Examples include: `<span>`, `<a>`, `<strong>`, `<em>`, `<img>`.
+
+### HTML Attributes
+
+Attributes provide additional information about HTML elements.
+
+- Always included in the opening tag.
+- Consist of a name and a value, separated by an equals sign.
+- Values are enclosed in quotes (single or double).
+- They are written as `name="value"`.
+
+Example:
+```html
+<a href="https://example.com" target="_blank" rel="noopener">Visit Example</a>
+```
+Here:
+- `href` is an attribute specifying the link's destination.
+- `target="_blank"` opens the link in a new tab.
+- `rel="noopener"` improves security when using `_blank`.
+
+Common attributes:
+- `id` → Unique identifier.
+- `class` → Class name(s) for CSS/JS.
+- `src` → Source URL for images, scripts.
+- `alt` → Alternative text for images.
+- `title` → Tooltip text.
+- `style` → Inline CSS styles.
+
+✅ Example:
+```html
+<a href="https://example.com" target="_blank" rel="noopener">Visit Example</a>
+```
+
+### HTML Comments
+
+- Used to add notes or explanations in the code.
+- Not displayed in the browser.
+- Start with `<!--` and end with `-->`.
+
+Example:
+```html
+<!-- This is a comment -->
+```
+
