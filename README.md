@@ -158,13 +158,294 @@ A tag is the building block of HTML.
 - Most tags come in pairs: opening tag `<tagname>` and closing tag `</tagname>`.
 - Some tags are self-closing (e.g., `<img />`, `<br />`, `<input />`).
 
-✅ Example:
+#### ⚡ Categories of HTML Tags
+
+**1. Basic Structure Tags**
+
+These form the skeleton of every HTML document.
+
+| Tag        | Description |
+|------------|-------------|
+| `<!DOCTYPE>` | Declares the document type (HTML5). |
+| `<html>`   | Root element of an HTML document. |
+| `<head>`   | Container for metadata, scripts, styles. |
+| `<body>`   | Contains the visible page content. |
+
+Example:
 ```html
-<p>This is a paragraph.</p>
+<!DOCTYPE html>   <!-- Declares HTML5 document -->
+<html lang="en">  <!-- Root element -->
+  <head>          <!-- Metadata (not shown to user) -->
+    <title>My Website</title>
+  </head>
+  <body>          <!-- Visible content -->
+    <h1>Hello World</h1>
+  </body>
+</html>
 ```
-Here:
-- `<p>` = opening tag
-- `</p>` = closing tag
+
+**2. ✍️ Text & Headings**
+
+Used for headings, paragraphs, bold, italic, etc.
+
+| Tag        | Description |
+|------------|-------------|
+| `<h1>` … `<h6>` | Headings from largest (`<h1>`) to smallest (`<h6>`). |
+| `<p>`      | Paragraph of text. |
+| `<span>`   | Inline text container (no semantic meaning). |
+| `<br>`     | Line break. |
+| `<hr>`     | Horizontal rule (divider). |
+| `<b>` / `<strong>` | Bold text (`<strong>` is semantic for importance). |
+| `<i>` / `<em>` | Italic text (`<em>` is semantic for emphasis). |
+| `<u>`      | Underlined text. |
+| `<mark>`   | Highlighted text. |
+| `<small>`  | Smaller text. |
+| `<sup>`    | Superscript text. |
+| `<sub>`    | Subscript text. |
+
+Example:
+```html
+<h1>Main Heading</h1>
+<h2>Sub Heading</h2>
+<p>This is a <b>bold</b> and <i>italic</i> text.</p>
+<u>Underlined text</u>
+<small>Smaller text</small>
+<mark>Highlighted text</mark>
+```
+
+**3. 🔗 Links & Navigation**
+
+| Tag        | Description |
+|------------|-------------|
+| `<a>`      | Creates a hyperlink. |
+| `<nav>`    | Defines navigation links section. |
+
+Example:
+```html
+<a href="https://example.com" target="_blank">Visit Example</a>
+<nav>
+  <a href="/">Home</a> | <a href="/about">About</a>
+</nav>
+```
+
+
+**4. 🖼️ Media & Graphics**
+
+| Tag        | Description |
+|------------|-------------|
+| `<img>`    | Displays an image. |
+| `<figure>` | Groups media content with caption. |
+| `<figcaption>` | Caption for a `<figure>`. |
+| `<audio>`  | Embeds audio content. |
+| `<video>`  | Embeds video content. |
+| `<source>` | Defines media file sources for `<audio>`/`<video>`. |
+| `<canvas>` | Used for drawing graphics with JavaScript. |
+| `<svg>`    | Scalable Vector Graphics container. |
+
+
+Example:
+```html
+<img src="photo.jpg" alt="A photo" width="200" />
+<audio controls>
+  <source src="song.mp3" type="audio/mpeg" />
+</audio>
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4" />
+</video>
+
+<figure>
+  <img src="image.png" alt="Example" />
+  <figcaption>This is an image caption</figcaption>
+</figure>
+
+<canvas id="myCanvas"></canvas>
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+</svg>
+```
+
+**5.📋 Lists**
+
+| Tag        | Description |
+|------------|-------------|
+| `<ul>`     | Unordered list (bullets). |
+| `<ol>`     | Ordered list (numbers). |
+| `<li>`     | List item. |
+| `<dl>`     | Description list. |
+| `<dt>`     | Term in a description list. |
+| `<dd>`     | Description of a term. |
+
+
+Example:
+```html
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+</ul>
+
+<ol>
+  <li>Step One</li>
+  <li>Step Two</li>
+</ol>
+
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+</dl>
+```
+
+**6. 📊 Tables**
+
+
+| Tag        | Description |
+|------------|-------------|
+| `<table>`  | Defines a table. |
+| `<tr>`     | Table row. |
+| `<th>`     | Table header cell. |
+| `<td>`     | Table data cell. |
+| `<caption>` | Table caption. |
+| `<thead>`  | Groups table header rows. |
+| `<tbody>`  | Groups main body rows. |
+| `<tfoot>`  | Groups footer rows. |
+
+```html
+<table>
+  <caption>Sample Table</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>30</td>
+      <td>New York</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+      <td>Los Angeles</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">End of Table</td>
+    </tr>
+  </tfoot>
+```
+
+
+**7. 📝 Forms & Input**
+
+| Tag        | Description |
+|------------|-------------|
+| `<form>`   | Defines a form for user input. |
+| `<input>`  | Input field (text, checkbox, radio, etc.). |
+| `<textarea>` | Multi-line text input. |
+| `<button>` | Clickable button. |
+| `<select>` | Drop-down list. |
+| `<option>` | An option in a drop-down list. |
+| `<label>`  | Label for form input. |
+| `<fieldset>` | Groups related form inputs. |
+| `<legend>` | Caption for a `<fieldset>`. |
+| `<datalist>` | Provides predefined input options. |
+| `<output>` | Displays calculation/result of form. |
+
+
+```html
+<form action="/submit" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" />
+  
+  <input type="checkbox" id="subscribe" /> Subscribe
+  <input type="radio" name="gender" value="male" /> Male
+  
+  <select>
+    <option>USA</option>
+    <option>UK</option>
+  </select>
+  
+  <textarea rows="4" cols="30">Write here...</textarea>
+  
+  <button type="submit">Submit</button>
+</form>
+```
+
+
+**8. 🏗️ Semantic HTML5**
+
+These give meaning to structure.
+
+| Tag        | Description |
+|------------|-------------|
+| `<header>` | Introductory content or navigation. |
+| `<nav>`    | Navigation links. |
+| `<main>`   | Main page content. |
+| `<section>` | A section of content. |
+| `<article>` | Independent piece of content (e.g., blog post). |
+| `<aside>`  | Sidebar or related content. |
+| `<footer>` | Footer content. |
+| `<address>` | Contact information. |
+
+Example:
+```html
+<header>Site Header</header>
+<nav>Navigation Links</nav>
+<main>Main Content</main>
+<article>Blog Post</article>
+<section>Section of Content</section>
+<aside>Sidebar Content</aside>
+<footer>Site Footer</footer>
+```
+
+
+**9. ⚙️ Metadata & Scripting**
+
+| Tag        | Description |
+|------------|-------------|
+| `<title>`  | Document title (appears in browser tab). |
+| `<meta>`   | Metadata (charset, description, viewport, etc.). |
+| `<link>`   | Links external resources (CSS, favicon). |
+| `<style>`  | Internal CSS styles. |
+| `<script>` | JavaScript code or external file reference. |
+| `<noscript>` | Fallback content if JavaScript is disabled. |
+
+```html
+<script>
+  console.log("Hello, world!");
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+```
+
+**10. 🎛️ Interactive Elements**
+
+| Tag        | Description |
+|------------|-------------|
+| `<details>` | Collapsible content. |
+| `<summary>` | Summary/label for `<details>`. |
+| `<dialog>` | Dialog box or popup window. |
+| `<progress>` | Progress bar. |
+| `<meter>`   | Measurement within a known range. |
+| `<time>`    | Represents a time or date. |
+
+Example:
+```html
+<details>
+  <summary>More Info</summary>
+  <p>Details here...</p>
+</details>
+```
 
 ### HTML Element
 
