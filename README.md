@@ -480,6 +480,16 @@ Block-level elements start on a new line and take up the full width available. B
 
 Inline elements do not start on a new line and only take up as much width as necessary. Inline elements are typically used for small pieces of content within block-level elements. Examples include: `<span>`, `<a>`, `<strong>`, `<em>`, `<img>`.
 
+**HTML element editable in the browser**
+
+To make an HTML element editable directly in the browser, you can set the contenteditable attribute to true. This allows users to edit the content of the element in place.
+Example:
+```html
+<div contenteditable="true">
+  This is an editable div. Click here to edit the text.
+</div>
+```
+
 ### HTML Attributes
 
 Attributes provide additional information about HTML elements.
