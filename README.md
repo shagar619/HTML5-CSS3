@@ -213,6 +213,8 @@ Example:
 <mark>Highlighted text</mark>
 ```
 
+> `<strong>` indicates that the text is of strong importance, providing semantic meaning, while `<b>` does not convey any extra importance.
+
 **3. 🔗 Links & Navigation**
 
 | Tag        | Description |
@@ -263,6 +265,14 @@ Example:
   <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
 </svg>
 ```
+
+In `<img>` tag:
+- `src`: Specifies the path to the image file.
+- `alt`: Provides alternative text for the image, which is displayed if the image cannot be loaded.
+
+In `<video>` tag:
+- `controls`: Adds video controls like play, pause, and volume.
+- `source`: Specifies the video file and its format.
 
 **5.📋 Lists**
 
@@ -404,6 +414,7 @@ Example:
 <footer>Site Footer</footer>
 ```
 
+> Semantic HTML elements clearly describe their meaning in a human- and machine-readable way.
 
 **9. ⚙️ Metadata & Scripting**
 
@@ -604,3 +615,4 @@ Example:
   <img src="image.jpg" alt="Example Image">
 </a>
 ```
+
