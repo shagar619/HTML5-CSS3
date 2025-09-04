@@ -149,6 +149,11 @@ Example:
 </html>
 ```
 
+<div>
+
+ <img src="https://i.ibb.co.com/b5QrZJSX/html-intro.png" style="width:100%; height:auto;">
+
+</div>
 
 ### HTML Tag
 
@@ -634,4 +639,67 @@ Example:
 ```html
 <link rel="alternate" href="https://example.com/en" hreflang="en" />
 <link rel="alternate" href="https://example.com/es" hreflang="es" />
+```
+
+
+## HTML Entities
+
+An HTML Entity is a special code that represents a character that either:
+
+1. Cannot be typed directly on the keyboard, OR
+2. Has a reserved meaning in HTML (like `<`, `>`, `&`).
+3. They always start with an ampersand (`&`) and end with a semicolon (`;`).
+
+#### 🔑 Commonly Used HTML Entities
+
+**✅ Reserved Characters**
+
+| Entity | Symbol | Description |
+|--------|--------|-------------|
+| `&lt;` | < | Less than |
+| `&gt;` | > | Greater than |
+| `&amp;` | & | Ampersand |
+| `&quot;` | " | Double quote |
+| `&apos;` | ' | Apostrophe / Single quote |
+| `&nbsp;` |   | Non-breaking space |
+
+Example:
+```html
+<p>This is a &lt;strong&gt;example&lt;/strong&gt;.</p>
+<p>This is a &quot;double&quot; quote.</p>
+<p>This is a &apos;single&apos; quote.</p>
+```
+
+Output:
+This is a <strong>example</strong>.
+This is a "double" quote.
+This is a 'single' quote.
+
+
+**📖 Punctuation & Symbols**
+
+| Entity | Symbol | Description |
+|--------|--------|-------------|
+| `&copy;` | © | Copyright |
+| `&reg;` | ® | Registered trademark |
+| `&trade;` | ™ | Trademark |
+| `&cent;` | ¢ | Cent |
+| `&pound;` | £ | Pound Sterling |
+| `&yen;` | ¥ | Yen |
+| `&euro;` | € | Euro |
+| `&sect;` | § | Section |
+| `&para;` | ¶ | Paragraph |
+| `&bull;` | • | Bullet |
+| `&hellip;` | … | Ellipsis |
+| `&ndash;` | – | En dash |
+| `&mdash;` | — | Em dash |
+| `&prime;` | ′ | Prime (minutes/feet) |
+| `&Prime;` | ″ | Double prime (seconds/inches) |
+
+Example:
+```html
+<p>&copy; 2024 My Company</p>
+<p>Price: &euro;100</p>
+<p>Example: &hellip;</p>
+<p>&copy; 2025 TechCorp. All rights reserved. &reg; Trademark Protected.</p>
 ```
