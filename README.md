@@ -703,3 +703,43 @@ Example:
 <p>Example: &hellip;</p>
 <p>&copy; 2025 TechCorp. All rights reserved. &reg; Trademark Protected.</p>
 ```
+Output:
+© 2024 My Company
+Price: €100
+Example: …
+© 2025 TechCorp. All rights reserved. ® Trademark Protected.
+
+
+**🔢 Mathematical Symbols**
+
+| Entity | Symbol | Description |
+|--------|--------|-------------|
+| `&plus;` | + | Plus |
+| `&minus;` | − | Minus |
+| `&times;` | × | Multiplication |
+| `&divide;` | ÷ | Division |
+| `&equals;` | = | Equals |
+| `&ne;` | ≠ | Not equal |
+| `&le;` | ≤ | Less than or equal |
+| `&ge;` | ≥ | Greater than or equal |
+| `&radic;` | √ | Square root |
+| `&sum;` | ∑ | Summation |
+| `&infin;` | ∞ | Infinity |
+| `&pi;` | π | Pi |
+| `&deg;` | ° | Degree |
+
+Example:
+```html
+<p>5 &plus; 3 &equals; 8</p>
+<p>Area = &pi; r&sup2;</p>
+<p>Square root of 16 is &radic;16 = 4</p>
+<p>Infinity symbol: &infin;</p>
+```
+
+Output:
+5 + 3 = 8
+Area = π r²
+Square root of 16 is √16 = 4
+Infinity symbol: ∞
+
+
