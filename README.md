@@ -977,3 +977,47 @@ Example Form Using New Input Types:
         </div>  
     </form>
 ```
+
+
+## New tags in Media Elements in HTML5
+
+HTML5 introduced new media elements to handle audio and video content natively in web browsers without the need for external plugins like Flash. The two primary media elements are `<audio>` and `<video>`. Additionally, the `<source>` element is used to specify multiple media sources for these elements.
+
+| Tag        | Description                                      | Example Usage                                   |
+|------------|--------------------------------------------------|------------------------------------------------|
+| `<audio>`  | Defines an audio element to play audio content. | `<audio controls> <source src="audio.mp3"> </audio>` |
+| `<video>`  | Defines a video element to play video content.   | `<video controls> <source src="video.mp4"> </video>` |
+| `<source>` | Specifies the media source for audio or video.   | `<source src="audio.mp3" type="audio/mpeg">`    |
+| `<track>`  | Adds text tracks (subtitles, captions) to media. | `<track kind="subtitles" src="subs.vtt" srclang="en" label="English">` |
+| `<embed>`  | Embeds external content (like Flash, PDF).        | `<embed src="file.swf" width="400" height="300">` |
+| `<object>` | Embeds multimedia content (like images, videos).  | `<object data="file.pdf" type="application/pdf" width="400" height="300"></object>` |
+| `<param>`  | Defines parameters for `<object>`.                | `<param name="autoplay" value="true">`          |
+| `<canvas>` | Used for drawing graphics via scripting (usually JavaScript). | `<canvas id="myCanvas" width="200" height="100"></canvas>` |
+| `<svg>`    | Defines Scalable Vector Graphics.                 | `<svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="black" fill="red"/></svg>` |
+| `<map>`    | Defines an image map (clickable areas on an image). | `<map name="image-map"><area shape="rect" coords="34,44,270,350" href="link.html"></map>` |
+| `<area>`   | Defines a clickable area within an image map.     | `<area shape="circle" coords="100,100,50" href="link.html">` |
+| `<bdi>`    | Isolates a part of text that might be formatted in a different direction. | `<bdi>Some text</bdi>` |
+
+Example:
+```html
+<label>
+       Video:
+   </label>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+    </video>
+    <br>
+    <label>
+        Embed:
+    </label>
+    <embed type="video/webm" src="https://www.youtube.com/embed/MpoE6s2psCw" width="400" height="300">
+    <br>
+    <label>
+        Audio:
+    </label>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+```
+
