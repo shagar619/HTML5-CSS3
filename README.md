@@ -817,4 +817,25 @@ Music note: ♫
 Phone symbol: ☎
 Sun symbol: ☀
 
- 
+
+## Web Storage in HTML5
+
+Web Storage is a mechanism introduced in HTML5 that allows websites to store data in the browser (on the client side) more efficiently than cookies.
+
+It provides two main storage types:
+
+**1. localStorage** → Stores data with no expiration date (persists even after browser is closed).
+**2. sessionStorage** → Stores data for a single session (cleared when the browser tab is closed).
+
+#### 🔑 Why Web Storage Instead of Cookies?
+
+| Feature          | Cookies                     | Web Storage                |
+|------------------|-----------------------------|----------------------------|
+| **Storage Limit** | 4KB per domain (limited)   | 5MB per domain (unlimited) |
+| **Data Type**     | Limited to strings         | Supports various types     |
+| **Security**      | Not encrypted by default    | Encrypted by default       |
+| **Access**        | HTTP-only (not accessible) | Accessible by JavaScript   |
+| **API**          |  Complex        | Rich API for manipulation  |
+| **Lifetime**     | Configurable | Persistent or session-based |
+
+
