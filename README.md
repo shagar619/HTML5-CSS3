@@ -902,3 +902,78 @@ sessionStorage.clear();
 ## New Input Types Provided by HTML5 for Forms
 
 HTML5 introduced several new input types to enhance form functionality and user experience. These new input types provide built-in validation, better user interfaces, and improved data handling.
+
+| Input Type      | Description                                      | Example Usage                                   |
+|-----------------|--------------------------------------------------|------------------------------------------------|
+| `email`         | For email addresses, with built-in validation.   | `<input type="email" name="user_email" />`     |
+| `url`           | For URLs, with built-in validation.              | `<input type="url" name="website" />`          |
+| `tel`           | For telephone numbers.                           | `<input type="tel" name="phone" />`             |
+| `number`        | For numeric input, with min, max, step attributes.| `<  input type="number" name="quantity" min="1" max="10" step="1" />` |
+| `range`         | For selecting a value from a range (slider).     | `<input type="range" name="volume" min="0" max="100" />` |
+| `date`          | For selecting a date (calendar picker).          | `<input type="date" name="birthday" />`            |
+| `time`          | For selecting a time (time picker).              | `<input type="time" name="appointment_time" />` |
+| `datetime-local`| For selecting a date and time (local).           | `<input type="datetime-local" name="meeting" />` |
+| `color`         | For selecting a color (color picker).            | `<input type="color" name="favcolor" />`          |
+| `search`        | For search queries, with optimized UI.           | `<input type="search" name="search" />`            |
+| `file`          | For file uploads, allowing multiple files.       | `<input type="file" name="upload" multiple />` |
+| `checkbox`      | For selecting multiple options.                  | `<input type="checkbox" name="subscribe" />`     |
+| `radio`         | For selecting one option from a set.             | `<input type="radio" name="gender" value="male" />` |
+| `button`        | For custom buttons.                              | `<button type="button" onclick="myFunction()">Click Me</button>` |
+| `submit`        | For submitting a form.                           | `<input type="submit" value="Submit" />`         |
+| `reset`         | For resetting a form to its initial values.     | `<input type="reset" value="Reset" />`            |
+| `image`         | For submitting a form with an image.             | `<input type="image" src="image.jpg" alt="Submit" />` |
+| `hidden`        | For hidden form fields.                          | `<input type="hidden" name="user_id" value="12345" />` |
+| `password`      | For password input (masked).                     | `<input type="password" name="user_password" />`  |
+| `text`          | For single-line text input.                      | `<input type="text" name="username" />`          |
+| `textarea`      | For multi-line text input.                       | `<textarea name="message" rows="4" cols="50"></textarea>` |
+| `select`        | For drop-down lists.                            | `<select name="country"><option value="us">USA</option></select>` |
+| `datalist`      | For predefined options in an input field.        | `<input list="browsers" name="browser" /><datalist id="browsers"><option value="Chrome"><option value="Firefox"></datalist>` |
+| `output`        | For displaying the result of a calculation.      | `<output name="result" for="a b">0</output>`     |
+| `fieldset`      | For grouping related form elements.              | `<fieldset><legend>Personal Info</legend><input type="text" name="name" /></fieldset>` |
+| `legend`        | For providing a caption for a `<fieldset>`.      | `<fieldset><legend>Personal Info</legend></fieldset>` |
+
+Example Form Using New Input Types:
+```html
+    <form>  
+        <div>
+            <label>Date:</label>
+            <input type="date" id="date" />
+            <br>
+            <label>Week:</label>
+            <input type="week" id="week" />
+            <br>
+            <label>Month:</label>
+            <input type="month" id="month" />
+            <br>
+            <label>Time:</label>
+            <input type="time" id="time" />
+            <br>
+            <label>Datetime:</label>
+            <input type="datetime" id="datetime" />
+            <br>
+            <label>Datetime Local:</label>
+            <input type="datetime-local" id="datetime-local" />
+            <br>
+            <label>Color:</label>
+            <input type="color" id="color"/>
+            <br>
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="email address" />
+            <br>
+            <label>Number:</label>
+            <input type="number" id="number" />
+            <br>
+            <label>Search:</label>
+            <input type="search" id="search" />
+            <br>
+            <label>Phone:</label>
+            <input type="tel" id="phone" placeholder="Phone Number" pattern="\d{10}$" />
+            <br>
+            <label>Range:</label>
+            <input type="range" id="range" />
+            <br>
+            <label>URL:</label>
+            <input type="url" id="url"/>
+        </div>  
+    </form>
+```
