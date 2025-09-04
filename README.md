@@ -839,3 +839,66 @@ It provides two main storage types:
 | **Lifetime**     | Configurable | Persistent or session-based |
 
 
+#### 🛠️ The Two Types of Web Storage
+
+**1. localStorage**
+
+- Stores data permanently (until manually cleared).
+- Shared across all tabs/windows of the same origin.
+
+Example (localStorage):
+```javascript
+// Store data
+localStorage.setItem('username', 'JohnDoe');
+localStorage.setItem('age', '30');
+// Retrieve data
+const username = localStorage.getItem('username'); // "JohnDoe"
+const age = localStorage.getItem('age'); // "30"
+// Remove data
+localStorage.removeItem('age');
+// Clear all data
+localStorage.clear();
+```
+
+**2. sessionStorage**
+
+- Stores data per session (cleared when tab is closed).
+- Data is NOT shared between different browser tabs/windows.
+
+Example (sessionStorage):
+```javascript
+// Store data
+sessionStorage.setItem('key', 'value');
+
+// Retrieve data
+const data = sessionStorage.getItem('key');
+
+// Remove data
+sessionStorage.removeItem('key');
+
+// Clear all data
+sessionStorage.clear();
+```
+
+#### 🔑 Common Web Storage Methods
+
+| Method            | Description                          |
+|-------------------|------------------------------------|
+| `setItem(key, value)` | Stores a key-value pair            |
+| `getItem(key)`       | Retrieves the value for a key      |
+| `removeItem(key)`    | Removes a key-value pair            |
+| `clear()`            | Clears all key-value pairs          |
+| `key(index)`         | Returns the key at the specified index |
+| `length`             | Returns the number of stored items  |
+
+#### 📦 Common Web Storage Objects
+| Object          | Description                        |
+|-----------------|------------------------------------|
+| `localStorage`  | Stores data permanently            |
+| `sessionStorage`| Stores data per session            |
+| `Cookie`        | Stores data in HTTP-only cookies    |
+
+
+## New Input Types Provided by HTML5 for Forms
+
+HTML5 introduced several new input types to enhance form functionality and user experience. These new input types provide built-in validation, better user interfaces, and improved data handling.
