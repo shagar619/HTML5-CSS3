@@ -743,3 +743,64 @@ Square root of 16 is √16 = 4
 Infinity symbol: ∞
 
 
+**⬆️ Arrows**
+
+| Entity | Symbol | Description |
+|--------|--------|-------------|
+| `&larr;` | ← | Left arrow |
+| `&uarr;` | ↑ | Up arrow |
+| `&rarr;` | → | Right arrow |
+| `&darr;` | ↓ | Down arrow |
+| `&harr;` | ↔ | Left-right arrow |
+| `&crarr;` | ↵ | Carriage return arrow |
+
+Example:
+```html
+<p>Go back &larr;</p>
+<p>Scroll up &uarr;</p>
+<p>Next &rarr;</p>
+<p>Scroll down &darr;</p>
+<p>Move &harr;</p>
+<p>Enter &crarr;</p>
+```
+Output:
+Go back ←
+Scroll up ↑
+Next →
+`<p>Scroll down ↓</p>`
+Move ↔
+Enter ↵
+
+
+**♡ Shapes & Misc**
+
+| Entity | Symbol | Description |
+|--------|--------|-------------|
+| `&hearts;` | ♥ | Heart |
+| `&clubs;` | ♣ | Club |
+| `&diams;` | ♦ | Diamond |
+| `&spades;` | ♠ | Spade |
+| `&starf;` | ★ | Solid star |
+| `&phone;` | ☎ | Telephone |
+| `&check;` | ✓ | Check mark |
+| `&cross;` | ✗ | Cross mark |
+| `&music;` | ♫ | Music note |
+| `&sun;` | ☀ | Sun symbol |
+
+Example:
+```html
+<p>I &hearts; HTML</p>
+<p>Solid star: &starf;</p>
+<p>Check mark: &check;</p>
+<p>Music note: &music;</p>
+<p>Phone symbol: &phone;</p>
+<p>Sun symbol: &sun;</p>
+```
+
+Output:
+I ♥ HTML
+Solid star: ★
+Check mark: ✓
+Music note: ♫
+Phone symbol: ☎
+Sun symbol: ☀
