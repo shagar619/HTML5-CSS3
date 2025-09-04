@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD012 MD026 MD001 MD022 MD032 MD029 MD019 MD034 MD031 MD047 MD040 MD009 MD058 MD024 MD033 MD041 MD045 MD007 MD036  -->
+<!-- markdownlint-disable MD012 MD026 MD001 MD022 MD032 MD029 MD019 MD034 MD031 MD047 MD040 MD009 MD058 MD024 MD033 MD041 MD045 MD007 MD036 MD028  -->
 
 <div>
 
@@ -220,6 +220,11 @@ Example:
 
 > `<strong>` indicates that the text is of strong importance, providing semantic meaning, while `<b>` does not convey any extra importance.
 
+
+> The effect on a normal webpage of the tags `<strong>`, `<b>`, `<em>`, and `<i>` is the same. `<b>` and `<i>` tags stand for bold and italic. These two tags only apply font styling, and the bold tag `<b>` just adds more ink to the text; these tags don't say anything about the text.
+
+> Whereas, `<strong>` and `<em>` tags represent that the span of text is of strong importance or more importance and emphatic stress respectively than the rest of the text. These tags have semantic meaning.
+
 **3. 🔗 Links & Navigation**
 
 | Tag        | Description |
@@ -278,6 +283,8 @@ In `<img>` tag:
 In `<video>` tag:
 - `controls`: Adds video controls like play, pause, and volume.
 - `source`: Specifies the video file and its format.
+
+> The `<figure>` tag specifies the self-contained content, like diagrams, images, code snippets, etc. `<figure>` tag is used to semantically organize the contents of an image like image, image caption, etc., whereas the `<img>` tag is used to embed the picture in the HTML5 document.
 
 **5.📋 Lists**
 
@@ -421,6 +428,9 @@ Example:
 
 > Semantic HTML elements clearly describe their meaning in a human- and machine-readable way.
 
+> As HTML5 was all about better semantics and arrangements of the tags and elements, the `<header>` tag specifies the header section of the webpage. Unlike in previous version there was one `<h1>` element for the entire webpage, now this is the header for one section such as `<article>` or `<section>`. According to the HTML5 specification, each <header> element must at least have one `<h1>` tag.
+
+
 **9. ⚙️ Metadata & Scripting**
 
 | Tag        | Description |
@@ -525,6 +535,8 @@ Common attributes:
 ```html
 <a href="https://example.com" target="_blank" rel="noopener">Visit Example</a>
 ```
+
+> Multiple elements in HTML can have the same class value, whereas a value of id attribute of one element cannot be associated with another HTML element.
 
 ### HTML Comments
 
@@ -804,3 +816,5 @@ Check mark: ✓
 Music note: ♫
 Phone symbol: ☎
 Sun symbol: ☀
+
+ 
