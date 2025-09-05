@@ -1272,3 +1272,22 @@ h1 {
     }
     ```
 
+
+- As Inline has the highest priority, any styles that are defined in the internal and external style sheets are overridden by Inline styles.
+- Internal or Embedded stands second in the priority list and overrides the styles in the external style sheet.
+- External style sheets have the least priority. If there are no styles defined either in the inline or internal style sheet then external style sheet rules are applied for the HTML tags.
+
+
+#### CSS Box Model
+The CSS Box Model is a fundamental concept in web design that describes how elements are structured and how their dimensions are calculated. Every HTML element can be considered as a rectangular box, which consists of several layers: content, padding, border, and margin.
+![CSS Box Model](https://www.w3schools.com/css/boxmodel.gif)
+```css
+/* Example of Box Model properties */
+.box {
+  width: 200px; /* Content width */
+  height: 100px; /* Content height */
+  padding: 20px; /* Space between content and border */
+  border: 5px solid black; /* Border thickness and style */
+  margin: 10px; /* Space outside the border */
+}
+```
