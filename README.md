@@ -1054,3 +1054,143 @@ CSS (Cascading Style Sheets) is a stylesheet language used to describe the prese
 **5. Consistency**
 
 - Makes your website look uniform across all pages.
+
+Example:
+```css
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+h1 {
+  color: #007BFF;
+}
+```
+
+#### 🔑 CSS Syntax
+
+```css
+selector {
+  property: value;
+}
+```
+- **Selector**: HTML element(s) to be styled (e.g., `body`, `h1`, `.class`, `#id`).
+- **Property**: CSS property to be changed (e.g., `color`, `font-size`).
+- **Value**: The value assigned to the property (e.g., `red`, `16px`).
+Example:
+```css
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+```
+This styles all `<h1>` elements to have blue text and a font size of 24 pixels.
+
+#### 🔗 Ways to Apply CSS
+
+1. **Inline CSS**: Apply styles directly to an HTML element using the `style` attribute.
+   ```html
+   <h1 style="color: blue; font-size: 24px;">Hello World</h1>
+   ```
+
+2. **Internal CSS**: Define styles within a `<style>` tag in the `<head>` section of an HTML document.
+   ```html
+   <head>
+       <style>
+           h1 {
+               color: blue;
+               font-size: 24px;
+           }
+       </style>
+   </head>
+   ```
+
+3. **External CSS**: Link to an external CSS file using the `<link>` tag.
+```html
+  <head>
+       <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+```
+4. **CSS in JavaScript**: Dynamically apply styles using JavaScript.
+   ```javascript
+   document.getElementById("myElement").style.color = "blue";
+   ```
+5. **CSS Preprocessors**: Use tools like SASS or LESS to write more advanced CSS with variables, nesting, and functions, which then compile to standard CSS.
+    ```scss
+    $primary-color: blue;
+  
+    h1 {
+        color: $primary-color;
+        font-size: 24px;
+    }
+    ```
+6. **CSS-in-JS**: Use libraries like styled-components or Emotion to write CSS directly within JavaScript files, often used in React applications.
+    ```javascript
+    import styled from 'styled-components';
+    const Title = styled.h1`
+        color: blue;
+        font-size: 24px;
+    `;
+    ```
+7. **CSS Modules**: A CSS file in which all class and animation names are scoped locally by default. Commonly used in React projects.
+    ```css
+    /* styles.module.css */
+    .title {
+        color: blue;
+        font-size: 24px;
+    }
+    ```
+    ```javascript
+    import styles from './styles.module.css';
+    <h1 className={styles.title}>Hello World</h1>
+    ```
+Example:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Hello World</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+```css
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+h1 {
+    font-size: 24px;
+}
+```
+
+8. **CSS Frameworks**: Use pre-designed CSS frameworks like Bootstrap, Tailwind CSS, or Foundation to quickly build responsive and visually appealing web pages with pre-defined styles and components.
+    ```html
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <button class="btn btn-primary">Bootstrap Button</button>
+    ```
+9. **CSS Variables (Custom Properties)**: Define reusable values in CSS using variables, which can be used throughout the stylesheet.
+    ```css
+    /* styles.css */
+    :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+    }
+    body {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+    ```
