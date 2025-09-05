@@ -1349,3 +1349,24 @@ background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
 background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
 ```
 
+#### `opacity` in CSS
+The `opacity` property in CSS is used to set the transparency level of an element, including its content and background. It affects the entire element, making it more or less transparent based on the specified value.
+**🛠️ Syntax**
+```css
+opacity: value;
+```
+- `value`: A decimal value between 0 (fully transparent) and 1 (fully opaque).
+✅ Examples:
+```css
+/* Example 1: Fully opaque (100% visible) */
+opacity: 1; /* No transparency */
+/* Example 2: 75% opacity */
+opacity: 0.75; /* 25% transparent */
+/* Example 3: 50% opacity */
+opacity: 0.5; /* 50% transparent */
+/* Example 4: 25% opacity */
+opacity: 0.25; /* 75% transparent */
+/* Example 5: Fully transparent (0% visible) */
+opacity: 0; /* Completely invisible */
+```
+
