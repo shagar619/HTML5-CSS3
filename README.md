@@ -1468,3 +1468,104 @@ background-color: hsla(0, 0%, 0%, 0.7); /* Black with 70% opacity */
 background-color: hsla(0, 0%, 100%, 0.3); /* White with 30% opacity */
 ```
 
+
+### CSS backgrounds
+
+In CSS, the background is the "layer" behind the content and padding of an element. You can style it using different background properties.
+
+#### 🛠️ CSS Background Properties
+
+**1. `background-color`**
+
+Sets the background color.
+```css
+body {
+  background-color: lightblue;
+}
+```
+
+**2. `background-image`**
+
+Sets a background image.
+```css
+div {
+  background-image: url('background.jpg');
+}
+```
+
+**3. `background-repeat`**
+
+Controls whether the background image repeats.
+
+- Values: `repeat` (default), `repeat-x`, `repeat-y`, `no-repeat`.
+```css
+div {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+}
+```
+
+**4. `background-position`**
+
+Sets the starting position of the background image.
+- Values: `left`, `right`, `center`, `top`, `bottom`, or specific coordinates (e.g., `50% 50%`).
+```css
+div {
+  background-image: url('background.jpg');
+  background-position: top right;
+}
+```
+
+**5. `background-size`**
+
+Specifies the size of the background image.
+- Values: `auto` (default), `cover`, `contain`, or specific dimensions (e.g., `100px 200px`).
+```css
+div {
+  background-image: url('background.jpg');
+  background-size: cover;
+}
+```
+
+**6. `background-attachment`**
+
+Controls whether the background image scrolls with the page or is fixed.
+- Values: `scroll` (default), `fixed`, `local`.
+```css
+div {
+  background-image: url('background.jpg');
+  background-attachment: fixed;
+}
+```
+
+**7. `background-clip`**
+
+Defines how far the background extends within an element.
+- Values: `border-box` (default), `padding-box`, `content-box`.
+```css
+div {
+  background-color: lightblue;
+  background-clip: padding-box;
+}
+```
+
+**8. `background-origin`**
+
+Specifies the positioning area of the background image.
+- Values: `border-box` (default), `padding-box`, `content-box`.
+```css
+div {
+  background-image: url('background.jpg');
+  background-origin: content-box;
+}
+```
+
+**9. `background` (shorthand property)**
+
+Combines all background properties into one declaration.
+```css
+div {
+  background: lightblue url('background.jpg') no-repeat top right / cover fixed;
+}
+```
+
