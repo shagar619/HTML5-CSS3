@@ -1469,7 +1469,7 @@ background-color: hsla(0, 0%, 100%, 0.3); /* White with 30% opacity */
 ```
 
 
-### CSS backgrounds
+### CSS backgrounds properties
 
 In CSS, the background is the "layer" behind the content and padding of an element. You can style it using different background properties.
 
@@ -1569,3 +1569,100 @@ div {
 }
 ```
 
+
+
+### CSS border properties
+
+In CSS, borders are used to define the edges of an element. You can customize the appearance of borders using various border properties.
+
+#### 🛠️ CSS Border Properties
+
+**1. `border-width`**
+
+Sets the width of the border.
+- Values: `thin`, `medium` (default), `thick`, or specific measurements (e.g., `2px`, `0.5em`).
+```css
+div {
+  border-width: 2px;
+}
+```
+
+**2. `border-style`**
+
+Sets the style of the border.
+- Values: `none` (default), `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset`.
+```css
+div {
+  border-style: solid;
+}
+```
+
+**3. `border-color`**
+
+Sets the color of the border.
+- Values: color names, hex codes, RGB, RGBA, HSL, HSLA.
+```css
+div {
+  border-color: red;
+}
+```
+
+**4. `border` (shorthand property)**
+
+Combines `border-width`, `border-style`, and `border-color` into one declaration.
+```css
+div {
+  border: 2px solid red;
+}
+```
+
+**5. `border-top`, `border-right`, `border-bottom`, `border-left`**
+
+Sets the border properties for individual sides of an element.
+```css
+div {
+  border-top: 2px solid red;
+  border-right: 2px dashed blue;
+  border-bottom: 2px dotted green;
+  border-left: 2px double black;
+}
+```
+
+**6. `border-radius`**
+
+Sets the rounded corners of the border.
+- Values: specific measurements (e.g., `5px`, `50%` for a circle).
+```css
+div {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+```
+
+**7. `border-image`**
+
+Sets an image as the border of an element.
+- Values: `url()`, `slice`, `width`, `outset`, `repeat
+```css
+div {
+  border: 10px solid transparent;
+  border-image: url('border.png') 30 round;
+}
+```
+
+### CSS margin properties
+
+In CSS, margins are used to create space around elements, outside of any defined borders. You can customize the margins using various margin properties.
+
+#### 🛠️ CSS Margin Properties
+
+**1. `margin` (shorthand property)**
+
+Sets the margin for all four sides of an element.
+- Values: specific measurements (e.g., `10px`, `1em`), percentages
+```css
+div {
+  margin: 20px; /* 20px on all sides */
+}
+```
+**2. `margin-top`**
