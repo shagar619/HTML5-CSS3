@@ -1905,3 +1905,78 @@ p {
 }
 ```
 
+
+#### Difference between CSS border and outline
+
+**CSS border** is used to draw a border around an element, while **CSS outline** is used to draw a line around an element. The outline is always drawn around the element, regardless of the element's size, while the border can be hidden or modified using CSS properties like `border-width` and `border-style`.
+
+
+### CSS Link States
+
+Links (`<a>`) in CSS have different states that let us style them depending on user interaction. These are called pseudo-classes for links.
+
+**1. `a:link` → Normal, Unvisited Link**
+
+Styles the link when it has not been visited.
+```css
+a:link {
+  color: blue;
+}
+```
+
+**2. `a:visited` → Visited Link**
+
+Styles the link when it has been visited.
+```css
+a:visited {
+  color: red;
+}
+```
+
+**3. `a:hover` → Hovered Link**
+
+Styles the link when the user hovers over it with the mouse.
+```css
+a:hover {
+  color: green;
+}
+```
+
+**4. `a:active` → Active Link**
+
+Styles the link when it is being clicked or activated.
+```css
+a:active {
+  color: yellow;
+}
+```
+
+**5. `a:target` → Target Link**
+
+Styles the link when it is the target of a link.
+```css
+a:target {
+  color: orange;
+}
+```
+
+**6. `a:lang` → Language-Specific Link**
+
+Styles the link based on the language of the document.
+```css
+a:lang(fr) {
+  color: purple;
+}
+```
+
+**7. `a:focus` → Focused Link**
+
+Styles the link when it is focused using the keyboard.
+```css
+a:focus {
+  color: blue;
+}
+```
+
+
+
