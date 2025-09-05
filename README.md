@@ -1055,6 +1055,15 @@ CSS (Cascading Style Sheets) is a stylesheet language used to describe the prese
 
 - Makes your website look uniform across all pages.
 
+
+#### Why use CSS?
+
+- **Improved Design**: CSS provides powerful tools to create visually appealing web pages.
+- **Faster Load Times**: External CSS files can be cached by browsers, reducing load times.
+- **Easier Maintenance**: Changes can be made in one place (CSS file) rather than in multiple HTML files.
+- **Accessibility**: CSS can enhance the accessibility of web content for users with disabilities.
+
+
 Example:
 ```css
 body {
