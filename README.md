@@ -1079,12 +1079,80 @@ selector {
 - **Value**: The value assigned to the property (e.g., `red`, `16px`).
 Example:
 ```css
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Single Selector */
 h1 {
   color: blue;
   font-size: 24px;
 }
+
+/* Multiple Selectors */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: darkblue;
+}
+
+/* Class selector */
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+/* ID selector */
+#main-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+/* Descendant selector */
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Child selector */
+ul > li {
+  list-style-type: square;
+}
+
+/* Adjacent sibling selector */
+p + p {
+  margin-top: 10px;
+}
+
+/* General sibling selector */
+h2 ~ p {
+  color: gray;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* Pseudo-class selector */
+a:hover {
+  color: red;
+}
+
+/* Pseudo-element selector */
+p::first-letter {
+  font-size: 200%;
+  color: green;
+}
+
+/* Pseudo-class and pseudo-element selectors */
+input:focus::placeholder {
+  color: blue;
+}
 ```
-This styles all `<h1>` elements to have blue text and a font size of 24 pixels.
+- `.card` → applies to all elements with `class="card"`.
+- `#main-title` → applies only to element with `id="main-title"`.
 
 #### 🔗 Ways to Apply CSS
 
@@ -1194,3 +1262,4 @@ h1 {
         color: var(--secondary-color);
     }
     ```
+
