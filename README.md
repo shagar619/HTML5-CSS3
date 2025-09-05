@@ -682,7 +682,7 @@ Example:
 <p>This is a &apos;single&apos; quote.</p>
 ```
 
-Output:
+**Output:**
 This is a <strong>example</strong>.
 This is a "double" quote.
 This is a 'single' quote.
@@ -715,7 +715,7 @@ Example:
 <p>Example: &hellip;</p>
 <p>&copy; 2025 TechCorp. All rights reserved. &reg; Trademark Protected.</p>
 ```
-Output:
+**Output:**
 © 2024 My Company
 Price: €100
 Example: …
@@ -748,7 +748,7 @@ Example:
 <p>Infinity symbol: &infin;</p>
 ```
 
-Output:
+**Output:**
 5 + 3 = 8
 Area = π r²
 Square root of 16 is √16 = 4
@@ -775,7 +775,7 @@ Example:
 <p>Move &harr;</p>
 <p>Enter &crarr;</p>
 ```
-Output:
+**Output:**
 Go back ←
 Scroll up ↑
 Next →
@@ -809,7 +809,7 @@ Example:
 <p>Sun symbol: &sun;</p>
 ```
 
-Output:
+**Output:**
 I ♥ HTML
 Solid star: ★
 Check mark: ✓
@@ -1086,6 +1086,7 @@ selector {
 - **Selector**: HTML element(s) to be styled (e.g., `body`, `h1`, `.class`, `#id`).
 - **Property**: CSS property to be changed (e.g., `color`, `font-size`).
 - **Value**: The value assigned to the property (e.g., `red`, `16px`).
+
 Example:
 ```css
 /* Universal selector */
@@ -1166,12 +1167,14 @@ input:focus::placeholder {
 #### 🔗 Ways to Apply CSS
 
 1. **Inline CSS**: Apply styles directly to an HTML element using the `style` attribute.
-   ```html
+
+```html
    <h1 style="color: blue; font-size: 24px;">Hello World</h1>
-   ```
+```
 
 2. **Internal CSS**: Define styles within a `<style>` tag in the `<head>` section of an HTML document.
-   ```html
+
+```html
    <head>
        <style>
            h1 {
@@ -1180,7 +1183,7 @@ input:focus::placeholder {
            }
        </style>
    </head>
-   ```
+```
 
 3. **External CSS**: Link to an external CSS file using the `<link>` tag.
 ```html
@@ -1189,28 +1192,35 @@ input:focus::placeholder {
   </head>
 ```
 4. **CSS in JavaScript**: Dynamically apply styles using JavaScript.
-   ```javascript
+
+```javascript
    document.getElementById("myElement").style.color = "blue";
-   ```
+```
+
 5. **CSS Preprocessors**: Use tools like SASS or LESS to write more advanced CSS with variables, nesting, and functions, which then compile to standard CSS.
-    ```scss
+
+```scss
     $primary-color: blue;
   
     h1 {
         color: $primary-color;
         font-size: 24px;
     }
-    ```
+```
+
 6. **CSS-in-JS**: Use libraries like styled-components or Emotion to write CSS directly within JavaScript files, often used in React applications.
-    ```javascript
+
+```javascript
     import styled from 'styled-components';
     const Title = styled.h1`
         color: blue;
         font-size: 24px;
     `;
-    ```
+```
+
 7. **CSS Modules**: A CSS file in which all class and animation names are scoped locally by default. Commonly used in React projects.
-    ```css
+
+```css
     /* styles.module.css */
     .title {
         color: blue;
@@ -1220,7 +1230,8 @@ input:focus::placeholder {
     ```javascript
     import styles from './styles.module.css';
     <h1 className={styles.title}>Hello World</h1>
-    ```
+```
+
 Example:
 ```html
 <!DOCTYPE html>
@@ -1255,12 +1266,15 @@ h1 {
 ```
 
 8. **CSS Frameworks**: Use pre-designed CSS frameworks like Bootstrap, Tailwind CSS, or Foundation to quickly build responsive and visually appealing web pages with pre-defined styles and components.
-    ```html
+
+```html
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <button class="btn btn-primary">Bootstrap Button</button>
-    ```
+```
+
 9. **CSS Variables (Custom Properties)**: Define reusable values in CSS using variables, which can be used throughout the stylesheet.
-    ```css
+
+```css
     /* styles.css */
     :root {
         --primary-color: #007bff;
@@ -1270,7 +1284,7 @@ h1 {
         background-color: var(--primary-color);
         color: var(--secondary-color);
     }
-    ```
+```
 
 
 - As Inline has the highest priority, any styles that are defined in the internal and external style sheets are overridden by Inline styles.
@@ -1298,7 +1312,7 @@ Comments in CSS are used to add notes or explanations within the stylesheet. The
 /*
     This is a multi-line comment in CSS.
     It can span multiple lines.
-  */
+*/
 body {
   font-family: Arial, sans-serif; /* Setting the font family */
   background-color: #f0f0f0; /* Light gray background */
@@ -1356,6 +1370,7 @@ The `opacity` property in CSS is used to set the transparency level of an elemen
 opacity: value;
 ```
 - `value`: A decimal value between 0 (fully transparent) and 1 (fully opaque).
+
 ✅ Examples:
 ```css
 /* Example 1: Fully opaque (100% visible) */
@@ -1382,6 +1397,7 @@ Absolute units are fixed and do not change based on other elements or the viewpo
 | `cm` | Centimeters               | `margin: 2cm;`         |
 | `mm` | Millimeters               | `padding: 10mm;`       |
 | `in` | Inches                    | `border: 1in solid;`   |
+
 **2. Relative Units**
 Relative units are based on other elements or the viewport size, making them more flexible and adaptable to different screen sizes and resolutions.
 | Unit | Description                               | Example Usage               |
@@ -1393,6 +1409,7 @@ Relative units are based on other elements or the viewport size, making them mor
 | `vh` | Viewport height (1% of the viewport's height) | `height: 10vh;`          |
 | `vmin`| Minimum of `vw` and `vh`                  | `font-size: 5vmin;`          |
 | `vmax`| Maximum of `vw` and `vh`                  | `font-size: 5vmax;`          |
+
 ✅ Examples:
 ```css
 /* Absolute Units */
@@ -1420,4 +1437,34 @@ Relative units are based on other elements or the viewport size, making them mor
 }
 ```
 
+#### HSLA in CSS
+The `hsla()` function in CSS is used to define colors using the Hue-Saturation-Lightness (HSL) color model along with an Alpha channel for transparency. The `hsla()` function allows you to specify colors in a way that is often more intuitive than the traditional RGB model, especially when it comes to adjusting color properties like saturation and lightness.
+**`hsla` stands for:**
+- H = Hue
+- S = Saturation
+- L = Lightness
+- A = Alpha (opacity / transparency level)
+It’s an extension of the regular HSL color model, with an added alpha channel that controls transparency.
+**🛠️ Syntax**
+```css
+hsla(hue, saturation, lightness, alpha)
+```
+- `hue`: An integer value from 0 to 360 representing the color's position on the color wheel (0 = red, 120 = green, 240 = blue).
+- `saturation`: A percentage value (0% to 100%) representing the intensity of the color (0% = gray, 100% = full color).
+- `lightness`: A percentage value (0% to 100%) representing the brightness of the color (0% = black, 100% = white).
+- `alpha`: A decimal value between 0 (fully transparent) and 1 (fully opaque) representing the opacity level.
+
+✅ Examples:
+```css
+/* Example 1: Full opacity (100% visible) */
+background-color: hsla(0, 100%, 50%, 1); /* Red color */
+/* Example 2: 50% opacity */
+background-color: hsla(120, 100%, 50%, 0.5); /* Green color with 50% transparency */
+/* Example 3: 25% opacity */
+background-color: hsla(240, 100%, 50%, 0.25); /* Blue color with 25% transparency */
+/* Example 4: Semi-transparent black */
+background-color: hsla(0, 0%, 0%, 0.7); /* Black with 70% opacity */
+/* Example 5: Semi-transparent white */
+background-color: hsla(0, 0%, 100%, 0.3); /* White with 30% opacity */
+```
 
