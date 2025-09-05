@@ -1659,10 +1659,249 @@ In CSS, margins are used to create space around elements, outside of any defined
 **1. `margin` (shorthand property)**
 
 Sets the margin for all four sides of an element.
-- Values: specific measurements (e.g., `10px`, `1em`), percentages
+- Values: Sets all margins (top, right, bottom, left) in one line. Specific measurements (e.g., `10px`, `1em`), percentages
+```css
+/* One value: all sides */
+div { margin: 20px; }
+
+/* Two values: top-bottom | left-right */
+div { margin: 10px 30px; }
+
+/* Three values: top | left-right | bottom */
+div { margin: 10px 20px 30px; }
+
+/* Four values: top | right | bottom | left */
+div { margin: 5px 10px 15px 20px; }
+```
+
+**2. `margin-top`**
+
+Sets the top margin of an element.
 ```css
 div {
-  margin: 20px; /* 20px on all sides */
+  margin-top: 20px;
 }
 ```
-**2. `margin-top`**
+
+**3. `margin-right`**
+
+Sets the right margin of an element.
+```css
+div {
+  margin-right: 20px;
+}
+```
+
+**4. `margin-bottom`**
+
+Sets the bottom margin of an element.
+```css
+div {
+  margin-bottom: 20px;
+}
+```
+
+**5. `margin-left`**
+
+Sets the left margin of an element.
+```css
+div {
+  margin-left: 20px;
+}
+```
+
+### CSS padding properties
+
+In CSS, padding is the space between the content of an element and its border. You can customize the padding using various padding properties.
+
+#### 🛠️ CSS Padding Properties
+
+**1. `padding` (shorthand property)**
+
+Sets the padding for all four sides of an element.
+- Values: Sets all paddings (top, right, bottom, left) in one line. Specific measurements (e.g., `10px`, `1em`), percentages
+```css
+/* One value: all sides */
+div { padding: 20px; }
+/* Two values: top-bottom | left-right */
+div { padding: 10px 30px; }
+/* Three values: top | left-right | bottom */
+div { padding: 10px 20px 30px; }
+/* Four values: top | right | bottom | left */
+div { padding: 5px 10px 15px 20px; }
+```
+**2. `padding-top`**
+
+Sets the top padding of an element.
+```css
+div {
+  padding-top: 20px;
+}
+```
+
+**3. `padding-right`**
+
+Sets the right padding of an element.
+```css
+div {
+  padding-right: 20px;
+}
+```
+
+**4. `padding-bottom`**
+
+Sets the bottom padding of an element.
+```css
+div {
+  padding-bottom: 20px;
+}
+```
+
+**5. `padding-left`**
+
+Sets the left padding of an element.
+```css
+div {
+  padding-left: 20px;
+}
+```
+
+### CSS text properties
+
+In CSS, text properties are used to control the appearance and formatting of text within HTML elements. These properties allow you to customize font styles, sizes, colors, alignment, spacing, and more.
+
+#### 🛠️ CSS Text Properties
+
+**1. `color`**
+
+Sets the color of the text.
+```css
+p {
+  color: blue;
+}
+```
+
+**2. `font-family`**
+
+Specifies the font of the text.
+```css
+p {
+  font-family: Arial, sans-serif;
+}
+```
+
+**3. `font-size`**
+
+Sets the size of the text.
+```css
+p {
+  font-size: 16px;
+}
+```
+
+**4. `font-weight`**
+
+Sets the weight (boldness) of the text.
+- Values: `normal` (default), `bold`, `bolder`, `lighter`, or numeric values (100 to 900).
+```css
+p {
+  font-weight: bold;
+}
+```
+
+**5. `font-style`**
+
+Sets the style of the text.
+- Values: `normal` (default), `italic`, `oblique`.
+```css
+p {
+  font-style: italic;
+}
+```
+
+**6. `text-align`**
+
+Sets the horizontal alignment of the text.
+- Values: `left` (default), `right`, `center`, `justify`.
+```css
+p {
+  text-align: center;
+}
+```
+
+**7. `text-decoration`**
+
+Sets the decoration of the text.
+- Values: `none` (default), `underline`, `overline`, `line-through`, `blink`.
+```css
+p {
+  text-decoration: underline;
+}
+```
+
+**8. `text-transform`**
+
+Sets the capitalization of the text.
+- Values: `none` (default), `capitalize`, `uppercase`, `lowercase`.
+```css
+p {
+  text-transform: uppercase;
+}
+```
+
+**9. `line-height`**
+
+Sets the height of a line of text.
+```css
+p {
+  line-height: 1.5;
+}
+```
+
+**10. `letter-spacing`**
+
+Sets the space between characters in the text.
+```css
+p {
+  letter-spacing: 2px;
+}
+```
+
+**11. `word-spacing`**
+
+Sets the space between words in the text.
+```css
+p {
+  word-spacing: 4px;
+}
+```
+
+**12. `text-shadow`**
+
+Adds shadow to the text.
+```css
+p {
+  text-shadow: 2px 2px 5px gray;
+}
+```
+
+**13. `white-space`**
+
+Controls how whitespace inside an element is handled.
+- Values: `normal` (default), `nowrap`, `pre`, `pre-wrap`, `pre-line`.
+```css
+p {
+  white-space: nowrap;
+}
+```
+
+**14. `text-indent`**
+
+Sets the indentation of the first line of text.
+```css
+p {
+  text-indent: 30px;
+}
+}
+```
+
