@@ -1021,3 +1021,36 @@ Example:
     </audio>
 ```
 
+
+
+<div align="center" style="margin-top: 40px; margin-bottom: 40px;">
+  <h1>CSS3</h1>
+</div>
+
+
+## What is CSS?
+
+CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation and formatting of a document written in HTML or XML. It allows you to control the layout, colors, fonts, spacing, and overall visual appearance of web pages.
+
+#### ✨ Key Features of CSS
+
+**1. Separation of Concerns**
+
+- HTML handles content
+- CSS handles presentation (design/layout)
+
+**2. Cascading**
+
+- Styles are applied in a hierarchy (browser default → external CSS → inline CSS).
+
+**3. Reusability**
+
+- One CSS file can style multiple web pages.
+
+**4. Responsive Design**
+
+- CSS allows different layouts for different devices (desktop, tablet, mobile).
+
+**5. Consistency**
+
+- Makes your website look uniform across all pages.
