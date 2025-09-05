@@ -1370,3 +1370,54 @@ opacity: 0.25; /* 75% transparent */
 opacity: 0; /* Completely invisible */
 ```
 
+
+#### CSS Units
+CSS units are used to specify the size, length, or measurement of various properties in CSS. They can be broadly categorized into two types: absolute units and relative units.
+**1. Absolute Units**
+Absolute units are fixed and do not change based on other elements or the viewport size. They are best used for print or when you need precise control over the size of an element.
+| Unit | Description               | Example Usage          |
+|------|---------------------------|------------------------|
+| `px` | Pixels                    | `width: 100px;`        |
+| `pt` | Points (1pt = 1/72 inch)  | `font-size: 12pt;`      |
+| `cm` | Centimeters               | `margin: 2cm;`         |
+| `mm` | Millimeters               | `padding: 10mm;`       |
+| `in` | Inches                    | `border: 1in solid;`   |
+**2. Relative Units**
+Relative units are based on other elements or the viewport size, making them more flexible and adaptable to different screen sizes and resolutions.
+| Unit | Description                               | Example Usage               |
+|------|-------------------------------------------|-----------------------------|
+| `%`  | Percentage of the parent element's size   | `width: 50%;`             |
+| `em` | Relative to the font-size of the element  | `font-size: 2em;` (2 times the current font size) |
+| `rem`| Relative to the font-size of the root element | `font-size: 1.5rem;` (1.5 times the root font size) |
+| `vw` | Viewport width (1% of the viewport's width) | `width: 10vw;`            |
+| `vh` | Viewport height (1% of the viewport's height) | `height: 10vh;`          |
+| `vmin`| Minimum of `vw` and `vh`                  | `font-size: 5vmin;`          |
+| `vmax`| Maximum of `vw` and `vh`                  | `font-size: 5vmax;`          |
+✅ Examples:
+```css
+/* Absolute Units */
+.box {
+  width: 200px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  margin: 10mm; /* Margin in millimeters */
+}
+.text {
+  font-size: 16pt; /* Font size in points */
+}
+```
+```css
+/* Relative Units */
+.container {
+  width: 80%; /* 80% of the parent element's width */
+  padding: 2em; /* Padding relative to the element's font size */
+}
+.title {
+  font-size: 2rem; /* Font size relative to the root element's font size */
+}
+.responsive-box {
+  width: 50vw; /* 50% of the viewport's width */
+  height: 30vh; /* 30% of the viewport's height */
+}
+```
+
+
