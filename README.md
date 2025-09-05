@@ -1280,7 +1280,6 @@ h1 {
 
 #### CSS Box Model
 The CSS Box Model is a fundamental concept in web design that describes how elements are structured and how their dimensions are calculated. Every HTML element can be considered as a rectangular box, which consists of several layers: content, padding, border, and margin.
-![CSS Box Model](https://www.w3schools.com/css/boxmodel.gif)
 ```css
 /* Example of Box Model properties */
 .box {
@@ -1291,3 +1290,27 @@ The CSS Box Model is a fundamental concept in web design that describes how elem
   margin: 10px; /* Space outside the border */
 }
 ```
+
+#### Add a comment in CSS
+Comments in CSS are used to add notes or explanations within the stylesheet. They are ignored by the browser and do not affect the rendering of the page. Comments can be helpful for documenting code, explaining complex sections, or temporarily disabling code during development.
+```css
+/* This is a single-line comment in CSS */
+/*
+    This is a multi-line comment in CSS.
+    It can span multiple lines.
+  */
+body {
+  font-family: Arial, sans-serif; /* Setting the font family */
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  /* The following line sets the margin for the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  /* Box-sizing property to include padding and border in the element's total width and height */
+  box-sizing: border-box;
+}
+h1 {
+  color: #007BFF; /* Blue color for headings */
+}
+```
+
