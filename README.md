@@ -1314,3 +1314,38 @@ h1 {
 }
 ```
 
+#### `rgba()` in CSS
+
+The `rgba()` function in CSS is used to define colors using the Red-Green-Blue (RGB) color model along with an Alpha channel for transparency. The `rgba()` function allows you to specify colors with varying levels of opacity, making it useful for creating overlays, backgrounds, and other design elements that require transparency.
+
+**`rgba` stands for:**
+
+- R = Red
+- G = Green
+- B = Blue
+- A = Alpha (opacity / transparency level)
+
+It’s an extension of the regular RGB color model, with an added alpha channel that controls transparency.
+
+**🛠️ Syntax**
+```css
+rgba(red, green, blue, alpha)
+```
+- `red`, `green`, `blue`: Integer values from 0 to 255 representing the intensity of each color component.
+- `alpha`: A decimal value between 0 (fully transparent) and 1 (fully opaque) representing the opacity level.
+
+
+✅ Examples:
+```css
+/* Example 1: Full opacity (100% visible) */
+background-color: rgba(255, 0, 0, 1); /* Red color */
+/* Example 2: 50% opacity */
+background-color: rgba(0, 255, 0, 0.5); /* Green color with 50% transparency */
+/* Example 3: 25% opacity */
+background-color: rgba(0, 0, 255, 0.25); /* Blue color with 25% transparency */
+/* Example 4: Semi-transparent black */
+background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+/* Example 5: Semi-transparent white */
+background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+```
+
