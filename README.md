@@ -2079,3 +2079,88 @@ a:focus {
 | Off-Screen (`left: -9999px`) | ❌ No | ✅ Yes | ❌ No | Screen readers only |
 | `clip-path/clip` | ❌ No | ✅ Yes | ❌ No | Accessibility hiding |
 | `height: 0; width: 0;` | ❌ No | ✅ Yes | ❌ No | Special cases |
+
+
+#### Difference between `display: none` and `visibility: hidden`
+
+- `display: none` hides the element completely, meaning it's removed from the layout and doesn't take up any space.
+- `visibility: hidden` hides the element but keeps its layout and space, making it invisible but still accessible.
+
+
+### Overlap elements in CSS
+
+#### 🎯 Ways to Overlap Elements in CSS
+
+**1. Using `position` + `z-index` (Most Common)**
+
+use positioning (`absolute`, `relative`, `fixed`, `sticky`) and control stack order with `z-index`.
+
+Example:
+```html
+<div class="box1"></div>
+<div class="box2"></div>
+```
+```css
+.box1 {
+  position: relative;
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  z-index: 1; /* lower */
+}
+
+.box2 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: tomato;
+  width: 150px;
+  height: 150px;
+  z-index: 2; /* higher, overlaps */
+}
+```
+
+**2. Using Negative Margins**
+
+Elements can be pulled on top of others with negative margins.
+
+Example:
+```css
+.box2 {
+  margin-top: -100px; /* pulls it upward */
+}
+```
+
+**3. Using CSS Grid or Flexbox (Layered Children)**
+
+CSS Grid supports item layering with grid-area` or explicit stacking.
+
+Example:
+```css
+.container {
+  display: grid;
+}
+
+.item1 {
+  grid-area: 1 / 1;
+  background: lightgreen;
+}
+
+.item2 {
+  grid-area: 1 / 1; /* same grid cell */
+  background: orange;
+  opacity: 0.8;
+}
+```
+
+**4. Using Transform (`translate`, `rotate`, etc.)**
+
+CSS `transform` can move elements without affecting the normal flow.
+
+Example:
+```css
+.item3 {
+  transform: translate(100px, 100px); /* moves 100px right and 100px down */
+}
+```
+
