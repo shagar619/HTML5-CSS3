@@ -2164,3 +2164,97 @@ Example:
 }
 ```
 
+### CSS positioning
+
+#### 🎯 CSS Positioning Properties
+
+**1. `static` (Default)**
+
+- The default position for all elements.
+- Elements are placed in the normal document flow.
+- `top`, `left`, `right`, `bottom`, and `z-index` do not apply.
+
+Example:
+```css
+div {
+  position: static;
+}
+```
+
+**2. `relative`**
+
+- Elements are positioned relative to their normal position.
+- `top`, `left`, `right`, `bottom`, and `z-index` can be used.
+- `z-index` controls the stacking order.
+- Still takes up space in the layout.
+
+Example:
+```css
+div {
+  position: relative;
+  top: 20px; /* moves 20px down from its normal spot */
+  left: 10px;
+}
+```
+
+**3. `absolute`**
+
+- Positioned relative to the nearest ancestor with position: `relative` | `absolute` | `fixed` | `sticky`.
+- Removed from normal document flow (other elements act like it doesn’t exist).
+- Can overlap other elements.
+
+Example:
+```css
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+```
+
+
+**4. `fixed`**
+
+- Positioned relative to the viewport (browser window).
+- Stays in the same position even when scrolling.
+- Can overlap other elements.
+
+Example:
+```css
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+```
+
+**5. `sticky`**
+
+- Acts like `relative` until a scroll threshold is reached, then it "sticks" like `fixed`.
+
+Example:
+```css
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+```
+
+**6. `inherit` / `initial` / `unset`**
+
+- `inherit`: Inherits the value from the parent element.
+- `initial`: Resets the property to its default value.
+- `unset`: Resets the property to its inherited value or its initial value, depending on the context.
+
+Example:
+```css
+.parent {
+  color: inherit;
+}
+```
+
