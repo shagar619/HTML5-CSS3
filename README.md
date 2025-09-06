@@ -1766,6 +1766,13 @@ div {
 }
 ```
 
+#### Difference between margin and padding
+
+- **Margin** is the space between the edge of an element and its surrounding content. It defines the distance between the element and its neighboring elements, such as other elements, borders, or other elements. In Margin property we can allow negative or float number values. We can set the margin property to auto margins.
+- **Padding** is the space inside an element and is used to create space between the content and the border of an element. It defines the distance between the content and the border of an element. In Padding property we can allow only positive number values. We can set the padding property to auto padding.
+
+
+
 ### CSS text properties
 
 In CSS, text properties are used to control the appearance and formatting of text within HTML elements. These properties allow you to customize font styles, sizes, colors, alignment, spacing, and more.
