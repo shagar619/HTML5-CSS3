@@ -1987,3 +1987,95 @@ a:focus {
 
 
 
+### Hide an HTML element in CSS
+
+**1. `display: none` → Hidden Element**
+
+- Completely removes the element from the page.
+- The element does not take up space in the layout.
+- It’s invisible and not accessible for screen readers.
+```css
+.hidden {
+  display: none;
+}
+```
+
+**2. `visibility: hidden` → Invisible Element**
+
+- Keeps the element in the layout but hides it from view.
+- The element still takes up space in the layout.
+- It’s invisible and accessible for screen readers.
+```css
+.hidden {
+  visibility: hidden;
+}
+```
+
+**3. `opacity: 0` → Transparent Element**
+
+- Makes the element partially transparent, but still visible.
+- The element still takes up space in the layout.
+- It’s invisible and accessible for screen readers.
+```css
+.hidden {
+  opacity: 0;
+}
+```
+
+> ✅ Use for **animations/fade** effects where you later set `opacity: 1`;.
+
+**4. `pointer-events: none` → Invisible Element**
+
+- Prevents the element from receiving mouse events (like clicks).
+- The element still takes up space in the layout.
+- It’s invisible and accessible for screen readers.
+```css
+.hidden {
+  pointer-events: none;
+}
+```
+
+**5. Move it Off-Screen**
+
+- Use `position: absolute` to move the element outside the normal flow of the page.
+- Set `left` and `top` properties to move it to the desired location.
+```css
+.hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+```
+
+**6. `clip-path` or `clip` (Advanced)**
+
+- Use `clip-path` or `clip` to create a custom shape for the element.
+- Define a path or rectangle that defines the shape.
+```css
+.hidden {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+```
+
+**7. `height: 0; width: 0; overflow: hidden;`**
+
+- Set the height and width of the element to 0.
+- Set `overflow: hidden` to hide any content that overflows the element.
+```css
+.hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+```
+
+#### 📊 Comparison Table
+
+| Method | Takes Space? | Accessible? | Clickable? | Use Case |
+|--------|--------------|-------------|------------|----------|
+| `display: none` | ❌ No | ❌ No | ❌ No | Remove element completely |
+| `visibility: hidden` | ✅ Yes | ❌ No | ❌ No | Keep layout spacing |
+| `opacity: 0` | ✅ Yes | ✅ Yes | ✅ Yes | Animations, fades |
+| Off-Screen (`left: -9999px`) | ❌ No | ✅ Yes | ❌ No | Screen readers only |
+| `clip-path/clip` | ❌ No | ✅ Yes | ❌ No | Accessibility hiding |
+| `height: 0; width: 0;` | ❌ No | ✅ Yes | ❌ No | Special cases |
