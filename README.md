@@ -2342,3 +2342,93 @@ Example:
 }
 ```
 
+### CSS float
+
+The `float` property places an element on the left or right side of its container, allowing other content (like text) to flow around it.
+
+**🔑 Syntax**
+
+```css
+selector {
+  float: left | right | none | inline-start | inline-end;
+}
+```
+
+#### 📌 Float Property Values
+
+**1. `float: left;`**
+
+- Moves the element to the left side of the container.
+- Other content flows on the right.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  float: left;
+}
+```
+
+**2. `float: right;`**
+
+- Moves the element to the right side of the container.
+- Other content flows on the left.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  float: right;
+}
+```
+
+**3. `float: none;`**
+
+- Removes the element from the normal flow and allows other content to flow around it.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  float: none;
+}
+```
+
+**4. `float: inline-start;` / `float: inline-end;` (modern)**
+
+- Floats element according to writing direction (LTR or RTL).
+- Useful for internationalization.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  float: inline-start; /* or inline-end */
+}
+```
+
+#### 🧹 Clearing Floats (clear Property)
+
+To stop wrapping, use the `clear` property.
+
+Example:
+```css
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+
+- `clear: left` → stop floating left elements.
+- `clear: right` → stop floating right elements.
+- `clear: both` → stop floating elements on both sides.
+
