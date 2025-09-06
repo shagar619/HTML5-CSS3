@@ -2258,3 +2258,87 @@ Example:
 }
 ```
 
+
+### CSS overflow
+
+- The `overflow` property controls how extra content (that doesn’t fit) is displayed.
+- Applies to block containers with a fixed size (`height` / `width`).
+
+`🔑 Syntax`
+```css
+overflow: hidden | scroll | auto | visible | initial | inherit;
+```
+
+**📌 Overflow Values**
+
+**1. `visible` (default)**
+
+- Content is not clipped.
+- It overflows outside the container.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  overflow: visible; /* default */
+}
+```
+
+**2. `hidden`**
+
+- Content is clipped (cut off).
+- Extra content is not visible and no scrollbars appear.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+```
+
+**3. `scroll`**
+
+- Content is clipped.
+- Scrollbars always appear (horizontal/vertical).
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+```
+
+**4. `auto`**
+
+- Content is clipped.
+- Scrollbars appear only if needed.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
+```
+
+**5. `Overflow-x and Overflow-y`**
+
+- `overflow-x` controls horizontal scrolling.
+- `overflow-y` controls vertical scrolling.
+
+Example:
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+```
+
