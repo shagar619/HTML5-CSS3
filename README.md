@@ -2798,3 +2798,28 @@ Example:
 
 > 📌 Works well for sticky positioning and when you need to position elements relative to the viewport.
 
+
+**✅ 6. Using CSS Grid**
+
+- Use `display: grid` on the container.
+- Use `grid-template-columns` to define the number of columns.
+- Use `grid-template-rows` to define the number of rows.
+
+Example:
+```html
+<div class="grid-box">
+  <p>Grid Layout</p>
+</div>
+```
+
+```css
+.grid-box {
+  display: grid;
+  place-items: center; /* shorthand for align + justify */
+  height: 150px;
+  border: 1px solid #ccc;
+}
+```
+
+> ✅ Cleanest method if using grid layout.
+
