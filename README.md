@@ -2676,3 +2676,29 @@ Exaple:
 | **contents**    | The element box disappears, but children remain in the flow. | Useful for accessibility wrappers |
 | **flow-root**   | Creates a new block formatting context (BFC). Fixes float issues. | Containers wrapping floated elements |
 | **run-in** ⚠️   | Deprecated. Behaves as block or inline depending on context. | Not recommended |
+
+
+
+### 🎯 Ways to Vertically Center Text in CSS
+
+**✅ 1. Using `line-height` (for single-line text)**
+
+- Set the `line-height` equal to the container height.
+- Works best when text is one line only.
+
+Example:
+```html
+<div class="box">Centered Text</div>
+```
+
+```css
+.box {
+  height: 100px; /* Set the height of the box */
+  line-height: 100px; /* Set line-height to match the box height */
+  text-align: center; /* Center the text horizontally */
+  background-color: lightblue; /* Optional: Add a background color */
+  border: 1px solid #ccc; /* Optional: Add a border */
+}
+```
+
+> 📌 Limitation: Does not work well for multi-line text.
