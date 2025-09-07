@@ -2725,3 +2725,76 @@ Example:
 }
 ```
 
+> 📌 Works well for multi-line text and more complex layouts.
+
+**✅ 3. Using `position: absolute` (advanced)**
+
+- Set `position: absolute` on the container.
+- Use `top: 50%` and `transform: translateY(-50%)` to vertically center the content.
+
+Example:
+```html
+<div class="absolute-box">
+  <p>Vertically Centered with Absolute Positioning</p>
+</div>
+```
+
+```css
+.absolute-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 150px;
+  border: 1px solid #ccc;
+}
+```
+
+> 📌 Works well for complex layouts and when you need to center content relative to other elements.
+
+**✅ 4. Using `position: fixed` (advanced)**
+
+- Set `position: fixed` on the container.
+- Use `top: 0` and `left: 0` to position the container at the top-left corner of the viewport.
+
+Example:
+```html
+<div class="fixed-box">
+  <p>Fixed Positioning</p>
+</div>
+```
+
+```css
+.fixed-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 150px;
+  border: 1px solid #ccc;
+}
+```
+
+> 📌 Works well for fixed positioning and when you need to position elements relative to the viewport.
+
+**✅ 5. Using `position: sticky` (advanced)**
+
+- Set `position: sticky` on the container.
+- Use `top: 0` to position the container at the top of the viewport.
+
+Example:
+```html
+<div class="sticky-box">
+  <p>Sticky Positioning</p>
+</div>
+```
+
+```css
+.sticky-box {
+  position: sticky;
+  top: 0;
+  height: 150px;
+  border: 1px solid #ccc;
+}
+```
+
+> 📌 Works well for sticky positioning and when you need to position elements relative to the viewport.
+
