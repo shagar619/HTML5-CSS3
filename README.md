@@ -2557,3 +2557,39 @@ Example:
 ```
 
 > ✅ Perfect for page layouts, dashboards.
+
+**8. `display: inline-grid`**
+
+- Combines `inline` and `grid` display types.
+- Useful for creating inline grid items, like icons or buttons.
+
+Example:
+```css
+.inline-grid {
+  display: inline-grid;
+  justify-content: center; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+}
+```
+
+> ✅ Useful when you want inline-grid items inside text.
+
+**9. `display: table`**
+
+- Creates a table-like structure.
+- Children (table cells) can be arranged in rows and columns.
+- Perfect for creating complex layouts with rows and columns.
+
+Example:
+```css
+.table {
+  display: table;
+  width: 100%; /* Make the table take up the full width */
+  border-collapse: collapse; /* Collapse table borders */
+}
+```
+
+✅ Children can use:
+
+- `display: table-row`;
+- `display: table-cell`;
