@@ -2524,3 +2524,36 @@ Example:
 
 > ✅ Use for navbar, grids, responsive UI.
 
+**6. `display: inline-flex`**
+
+- Combines `inline` and `flex` display types.
+- Useful for creating inline flex items, like icons or buttons.
+
+Example:
+```css
+.inline-flex {
+  display: inline-flex;
+  justify-content: center; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+}
+```
+
+> ✅ Useful when you want inline-flexible elements inside text.
+
+**7. `display: grid`**
+
+- Creates a grid container.
+- Children (grid items) can be arranged in rows and columns.
+- Perfect for creating complex layouts with rows and columns.
+
+Example:
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-template-rows: 100px 100px 100px; /* 3 equal-height rows */
+  grid-gap: 10px; /* Add space between grid items */
+}
+```
+
+> ✅ Perfect for page layouts, dashboards.
