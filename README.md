@@ -2593,3 +2593,67 @@ Example:
 
 - `display: table-row`;
 - `display: table-cell`;
+
+> ✅ Perfect for creating complex layouts with rows and columns.
+
+**10. `display: list-item`**
+
+- Makes an element behave like a list item.
+- Useful for creating bulleted lists, numbered lists, or any other list-style content.
+
+Example:
+```css
+.list-item {
+  display: list-item;
+  list-style-type: disc; /* Use a disc icon as a list item */
+}
+```
+
+✅ Useful for creating bulleted lists, numbered lists, or any other list-style content.
+
+
+**11. `display: run-in` (⚠️ Deprecated in most browsers)**
+
+- Makes an element behave like a run-in element.
+- Useful for creating inline elements that behave like run-ins, such as inline lists or inline blocks.
+
+Exaple:
+```css
+.run-in {
+  display: run-in;
+  font-size: 1.5em; /* Increase the font size */
+}
+```
+
+✅ Useful for creating inline elements that behave like run-ins, such as inline lists or inline blocks.
+
+**12. `display: contents`**
+
+- Makes an element behave like its contents.
+- Useful for creating elements that contain only their contents, without any additional markup.
+
+Exaple:
+```css
+.contents {
+  display: contents;
+  font-weight: bold; /* Make the contents bold */
+}
+```
+
+✅ Useful for creating elements that contain only their contents, without any additional markup.
+
+**13. `display: flow-root`**
+
+- Makes an element behave like a flow-root element.
+- Useful for creating elements that behave like flow-root elements, such as flex containers or grid containers.
+
+Exaple:
+```css
+.flow-root {
+  display: flow-root;
+  border: 1px solid #000; /* Add a border for visual clarity */
+}
+```
+
+✅ Useful for creating elements that behave like flow-root elements, such as flex containers or grid containers.
+
