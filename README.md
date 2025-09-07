@@ -2702,3 +2702,26 @@ Example:
 ```
 
 > 📌 Limitation: Does not work well for multi-line text.
+
+**✅ 2. Using Flexbox (modern and best practice)**
+
+- Set `display: flex` on the container.
+- Use `align-items: center` (vertical) and `justify-content: center` (horizontal if needed).
+
+Example:
+```html
+<div class="flex-box">
+  <p>Vertically Centered with Flexbox</p>
+</div>
+```
+
+```css
+.flex-box {
+  display: flex;
+  align-items: center;      /* vertical */
+  justify-content: center;  /* horizontal */
+  height: 150px;
+  border: 1px solid #ccc;
+}
+```
+
