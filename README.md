@@ -2467,7 +2467,7 @@ Example:
 }
 ```
 
-> ✅ Used for buttons, links, images, etc.
+> ✅ Examples: `<div>`, `<p>`, `<h1>`
 
 **3. `display: inline`**
 
@@ -2486,4 +2486,41 @@ Example:
 }
 ```
 
-> ✅ Used for text, icons, etc.
+> ✅ Examples: `<span>`, `<a>`, `<strong>`
+
+**4. `display: inline-block`**
+
+- Starts on a new line.
+- Takes width and height of content.
+- Does not support `width`, `height`, `margin`, `padding`.
+
+Example:
+```css
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+> ✅ Common for buttons, menus, badges.
+
+**5. `display: flex`**
+
+- Creates a flex container.
+- Children (flex items) can align horizontally or vertically.
+- Powerful for responsive layouts.
+
+Example:
+```css
+.flex {
+  display: flex;
+  justify-content: center; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+}
+```
+
+> ✅ Use for navbar, grids, responsive UI.
+
