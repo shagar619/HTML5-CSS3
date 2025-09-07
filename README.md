@@ -2657,3 +2657,22 @@ Exaple:
 
 ✅ Useful for creating elements that behave like flow-root elements, such as flex containers or grid containers.
 
+#### 🎯 CSS Display Property:
+
+| Display Value   | Description | Example Usage |
+|-----------------|-------------|---------------|
+| **none**        | Removes element completely from layout (not visible, no space taken). | `display: none;` (hide dropdown, modal, loader) |
+| **block**       | Element starts on a new line and takes full width. | `<div>`, `<p>`, `<h1>` |
+| **inline**      | Does not start on new line, only takes up as much width as content. Cannot set width/height. | `<span>`, `<a>` |
+| **inline-block** | Behaves like inline but supports width, height, margin, padding. | Buttons, nav links, badges |
+| **flex**        | Creates a flex container. Aligns children horizontally or vertically with flex properties. | Navbars, responsive layouts |
+| **inline-flex** | Same as flex, but container behaves like inline element. | Inline flexible widgets |
+| **grid**        | Creates a grid container. Children align in rows & columns. | Dashboards, web page layouts |
+| **inline-grid** | Same as grid but container is inline. | Inline structured elements |
+| **table**       | Behaves like `<table>`. | Custom tables, calendar layouts |
+| **table-row**   | Behaves like `<tr>`. | Inside a table container |
+| **table-cell**  | Behaves like `<td>`. | Table-like grid layouts |
+| **list-item**   | Behaves like `<li>`. Adds list marker automatically. | Custom lists, menus |
+| **contents**    | The element box disappears, but children remain in the flow. | Useful for accessibility wrappers |
+| **flow-root**   | Creates a new block formatting context (BFC). Fixes float issues. | Containers wrapping floated elements |
+| **run-in** ⚠️   | Deprecated. Behaves as block or inline depending on context. | Not recommended |
