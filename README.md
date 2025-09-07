@@ -2432,3 +2432,58 @@ Example:
 - `clear: right` → stop floating right elements.
 - `clear: both` → stop floating elements on both sides.
 
+### CSS `display` property
+
+CSS `display` property controls how an element is rendered in the layout.
+
+**1. `display: none`**
+
+- Element is not rendered (completely removed from layout).
+- Takes up no space.
+
+> ✅ Used for modals, dropdowns, toggles.
+
+Example:
+```css
+.hidden {
+  display: none;
+}
+```
+
+**2. `display: block`**
+
+- Starts on a new line.
+- Takes full width of its parent container.
+- Supports `width`, `height`, `margin`, `padding`.
+
+Example:
+```css
+.block {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+> ✅ Used for buttons, links, images, etc.
+
+**3. `display: inline`**
+
+- Does not start on a new line.
+- Takes width and height of content.
+- Does not support `width`, `height`, `margin`, `padding`.
+
+Example:
+```css
+.inline {
+  display: inline;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+> ✅ Used for text, icons, etc.
