@@ -2971,7 +2971,7 @@ Example:
 > ✅ Only the first `<p>` (direct child of `.parent`) turns blue.
 
 
-✅ 3. Adjacent Sibling Combinator (`+`)
+**✅ 3. Adjacent Sibling Combinator (`+`)**
 
 - Selects an element that is immediately after another element.
 - Written as: `A + B`
@@ -2989,3 +2989,24 @@ h2 + p {
 }
 ```
 
+> ✅ Only the first `<p>` after `<h2>` turns green.
+
+**✅ 4. General Sibling Combinator (`~`)**
+
+- Selects all siblings after a specified element.
+- Written as: `A ~ B`
+
+Example:
+```html
+<h2>Heading</h2>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+```
+
+```css
+h2 ~ p {
+  color: purple;
+}
+```
+
+> ✅ Both `<p>` elements after `<h2>` turn purple.
