@@ -2846,3 +2846,19 @@ Example:
 }
 ```
 
+**✅ 2. Center Horizontally (Text Align)**
+
+If the image is inline (default), you can use `text-align: center` on the parent.
+
+Example:
+```html
+<div class="container">
+  <img src="image.jpg" alt="Centered Image">
+</div>
+```
+
+```css
+.container {
+  text-align: center;
+}
+```
