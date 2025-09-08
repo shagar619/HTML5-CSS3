@@ -2862,3 +2862,41 @@ Example:
   text-align: center;
 }
 ```
+
+**✅ 3. Center Both Horizontally & Vertically (Flexbox)
+
+Example:
+```html
+<div class="flex-container">
+  <img src="image.jpg" alt="Centered Image">
+</div>
+```
+
+```css
+.flex-container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 300px;
+  border: 1px solid #ccc;
+}
+```
+
+**✅ 4. Center Both with CSS Grid**
+
+Example:
+```html
+<div class="grid-container">
+  <img src="image.jpg" alt="Centered Image">
+</div>
+```
+
+```css
+.grid-container {
+  display: grid;
+  place-items: center; /* shorthand for align + justify */
+  height: 300px;
+  border: 1px solid #ccc;
+}
+```
+
