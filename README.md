@@ -2900,3 +2900,27 @@ Example:
 }
 ```
 
+**✅ 5. Center with Absolute Positioning + Transform**
+
+Example:
+```html
+<div class="relative-container">
+  <img src="image.jpg" alt="Centered Image" class="center-img">
+</div>
+```
+
+```css
+.relative-container {
+  position: relative;
+  height: 300px;
+  border: 1px solid #ccc;
+}
+
+.center-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+
