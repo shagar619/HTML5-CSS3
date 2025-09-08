@@ -3254,3 +3254,50 @@ Example:
 }
 ```
 
+**👉 Variations:**
+
+- `to right` → left → right
+- `to bottom` (default) → top → bottom
+- Angle syntax: `45deg`, `180deg`
+
+```css
+background: linear-gradient(45deg, blue, pink);
+```
+
+**✅ 2. Radial Gradient**
+
+Colors blend in a circular shape.
+
+Example:
+```css
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, red, yellow, green);
+}
+```
+
+**👉 Shapes:**
+
+- circle
+- ellipse (default)
+
+```css
+background: radial-gradient(ellipse, blue, pink);
+```
+
+**✅ 3. Conic Gradient**
+
+Colors rotate around a center point like a pie chart.
+
+Example:
+```css
+.conic {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(from 45deg, red, yellow, green);
+}
+```
+
+> 👉 Can be used for charts, spinners, progress circles.
+
