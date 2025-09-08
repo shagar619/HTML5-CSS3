@@ -3119,3 +3119,50 @@ div:empty {
   display: none;
 }
 ```
+
+### 🎯 pseudo-elements in CSS
+
+- A pseudo-element lets you style specific parts of an element or generate content without modifying HTML.
+- Written with two colons (`::`) (though older CSS allowed one `:`).
+- Example: Insert content before or after an element.
+
+Example:
+```css
+p::first-line {
+  font-weight: bold;
+}
+```
+
+#### 📌 Common Pseudo-Elements
+
+**✅ 1. `::before`**
+
+- Inserts content before an element’s content.
+
+Example:
+```css
+<p class="quote">This is important.</p>
+```
+
+```css
+.quote::before {
+  content: "💡 ";
+  color: orange;
+}
+```
+
+**✅ 2. `::after`**
+
+- Inserts content after an element’s content.
+
+Example:
+```html
+<p class="required">Name</p>
+```
+
+```css
+.required::after {
+  content: " *";
+  color: red;
+}
+```
