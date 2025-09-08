@@ -3076,3 +3076,28 @@ p:only-child {
   background: lightyellow;
 }
 ```
+
+**✅ 3. Form States**
+
+Special states of form elements.
+
+- `:checked` → checkbox/radio checked.
+- `:disabled` → disabled input.
+- `:enabled` → enabled input.
+- `:required` → required fields.
+- `:optional` → optional fields.
+- `:valid` / `:invalid` → input validation states.
+
+Example:
+```css
+input:checked {
+  outline: 2px solid green;
+}
+input:disabled {
+  background: #eee;
+}
+input:invalid {
+  border: 2px solid red;
+}
+```
+
