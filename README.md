@@ -2823,3 +2823,26 @@ Example:
 
 > ✅ Cleanest method if using grid layout.
 
+
+
+### 🎯 Ways to Center an Image in CSS
+
+**✅ 1. Center Horizontally (Block-Level Image)**
+
+If the image is `display: block`, you can use `margin: auto`.
+
+Example:
+```html
+<div class="container">
+  <img src="image.jpg" alt="Centered Image">
+</div>
+```
+
+```css
+.container img {
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+  width: 200px;
+}
+```
+
