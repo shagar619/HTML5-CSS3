@@ -3010,3 +3010,43 @@ h2 ~ p {
 ```
 
 > ✅ Both `<p>` elements after `<h2>` turn purple.
+
+
+### 🎯 pseudo-classes in CSS
+
+- A pseudo-class defines a special state of an element.
+- It doesn’t add anything to the HTML — it’s purely CSS-based.
+- Example: Change a link’s color when hovered.
+```css
+a:hover {
+  color: red;
+}
+```
+
+#### 📌 Common Pseudo-Classes
+
+**✅ 1. User Interaction States**
+
+Used for links, buttons, inputs.
+
+- `:hover` → when user hovers over element.
+- `:active` → when element is being clicked.
+- `:focus` → when input/element is focused.
+- `:visited` → visited links.
+
+Example:
+```css
+button:hover {
+  background: blue;
+}
+button:active {
+  background: navy;
+}
+input:focus {
+  border-color: green;
+}
+a:visited {
+  color: purple;
+}
+```
+
