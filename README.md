@@ -3166,3 +3166,64 @@ Example:
   color: red;
 }
 ```
+
+**✅ 3. `::first-letter`**
+
+- Styles the first letter of an element.
+
+Example:
+```css
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: darkred;
+}
+```
+
+**✅ 4. `::first-line`**
+
+- Styles the first line of an element.
+
+Example:
+```css
+p::first-line {
+  font-style: italic;
+  color: darkblue;
+}
+```
+
+**✅ 5. `::selection`**
+
+- Styles the selected text.
+
+Example:
+```css
+::selection {
+  background-color: #4472c4;
+  color: white;
+}
+```
+
+**✅ 6. `::placeholder`**
+
+- Styles the placeholder text in an input field.
+
+Example:
+```css
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+```
+
+**✅ 7. `::marker`**
+
+- Styles the marker (bullet point) of a list item.
+
+Example:
+```css
+ul li::marker {
+  color: #ff0000;
+  font-weight: bold;
+}
+```
