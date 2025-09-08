@@ -3301,3 +3301,14 @@ Example:
 
 > 👉 Can be used for charts, spinners, progress circles.
 
+**🎨 Adding More Colors**
+
+Example:
+```css
+.box {
+  height: 150px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+```
+
+> ✅ Creates a rainbow effect.
