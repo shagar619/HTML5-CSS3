@@ -3312,3 +3312,51 @@ Example:
 ```
 
 > ✅ Creates a rainbow effect.
+
+### 🎯 CSS 2D Transformation
+
+- A way to modify the shape, size, and position of elements in 2D space.
+- Applied with:
+```css
+transform: function(value);
+```
+
+- You can also combine multiple transformations:
+```css
+transform: translate(x, y) rotate(angle) scale(x, y) skew(x, y);
+```
+
+#### 📌 2D Transformation Functions
+
+**✅ 1. `translate(x, y)`**
+
+Moves an element from its original position.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: translate(50px, 50px);
+}
+```
+
+- `x` and `y` are the horizontal and vertical offsets, respectively.
+
+**✅ 2. `rotate(angle)`**
+
+Rotates an element around its center point.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate(45deg);
+}
+```
+
+- `angle` is the rotation angle in degrees.
+
