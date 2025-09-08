@@ -2924,3 +2924,27 @@ Example:
 }
 ```
 
+
+### 🎯 CSS Combinators
+
+**✅ 1. Descendant Combinator (`space`)**
+
+- Selects elements that are inside another element (no matter how deep).
+- Written as: `A B`
+
+Example:
+```html
+<div class="parent">
+  <p>Child Paragraph</p>
+  <span><p>Nested Paragraph</p></span>
+</div>
+```
+
+```css
+.parent p {
+  color: red;
+}
+```
+
+> ✅ Both `<p>` elements inside `.parent` turn red.
+
