@@ -3359,4 +3359,56 @@ Example:
 ```
 
 - `angle` is the rotation angle in degrees.
+- `Positive angle` → clockwise
+- `Negative angle` → counter-clockwise
+
+**✅ 3. `scale(x, y)`**
+
+Resizes element (zoom in/out).
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: scale(1.5, 1.5);
+}
+```
+
+- `1.5` → increase size 150%
+- `<1` → shrink (e.g., `0.5`)
+
+
+**✅ 4. `skew(x-angle, y-angle)`**
+
+Skews an element along the X and Y axes.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: skew(20deg, 30deg);
+}
+```
+
+- `20deg` → skew along the X-axis
+- `30deg` → skew along the Y-axis
+
+
+**✅ 5. `matrix(a, b, c, d, e, f)`**
+
+Combines all transformations in a single function. Rarely written by hand.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: matrix(1, 0.5, -0.5, 1, 30, 20);
+}
+```
 
