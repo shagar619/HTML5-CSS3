@@ -2968,3 +2968,24 @@ Example:
 }
 ```
 
+> ✅ Only the first `<p>` (direct child of `.parent`) turns blue.
+
+
+✅ 3. Adjacent Sibling Combinator (`+`)
+
+- Selects an element that is immediately after another element.
+- Written as: `A + B`
+
+Example:
+```html
+<h2>Heading</h2>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+```
+
+```css
+h2 + p {
+  color: green;
+}
+```
+
