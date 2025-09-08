@@ -2948,3 +2948,23 @@ Example:
 
 > ✅ Both `<p>` elements inside `.parent` turn red.
 
+
+**✅ 2. Child Combinator (`>`)**
+
+- Selects elements that are direct children only.
+- Written as: `A > B`
+
+Example:
+```html
+<div class="parent">
+  <p>Direct Child</p>
+  <span><p>Nested Child</p></span>
+</div>
+```
+
+```css
+.parent > p {
+  color: blue;
+}
+```
+
