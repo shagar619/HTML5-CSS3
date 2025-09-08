@@ -3050,3 +3050,29 @@ a:visited {
 }
 ```
 
+
+**✅ 2. Structural Pseudo-Classes**
+
+Used for selecting elements by position.
+
+- `:first-child` → first child of parent.
+- `:last-child` → last child of parent.
+- `:nth-child(n)` → selects nth child (pattern possible).
+- `:nth-of-type(n)` → selects nth element of same type.
+- `:only-child` → if element is only child of parent.
+
+Example:
+```css
+ul li:first-child {
+  font-weight: bold;
+}
+ul li:last-child {
+  color: red;
+}
+ul li:nth-child(2) {
+  color: blue;
+}
+p:only-child {
+  background: lightyellow;
+}
+```
