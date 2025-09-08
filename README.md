@@ -3101,3 +3101,21 @@ input:invalid {
 }
 ```
 
+**✅ 4. Negation**
+
+- `:not(selector)` → selects elements that do not match.
+
+**✅ 5. Dynamic UI**
+
+- `:target` → element currently targeted by URL (#id).
+- `:empty` → element with no children.
+
+Example:
+```css
+#section:target {
+  background: yellow;
+}
+div:empty {
+  display: none;
+}
+```
