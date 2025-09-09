@@ -3436,3 +3436,81 @@ Example:
 ```
 
 > - `translate3d(100px, 50px, 200px)` → Moves the element 100px to the right, 50px down, and 200px forward.
+
+**✅ 2. `rotateX(angle)`**
+
+Rotates element around the X-axis.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotateX(45deg);
+}
+```
+
+> - `rotateX(45deg)` → Rotates the element 45 degrees around the X-axis.
+
+**✅ 3. `rotateY(angle)`**
+
+Rotates element around the Y-axis.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotateY(90deg);
+}
+```
+
+> `rotateY(90deg)` → Rotates the element 90 degrees around the Y-axis.
+
+**✅ 4. `rotateZ(angle)`**
+
+Rotates element around the Z-axis.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotateZ(180deg);
+}
+```
+
+> `rotateZ(180deg)` → Rotates the element 180 degrees around the Z-axis.
+
+**✅ 5. `rotate3d(x, y, z, angle)`**
+
+Rotates element around a custom axis defined by the given vector.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+```
+
+> `rotate3d(1, 1, 1, 45deg)` → Rotates the element 45 degrees around a custom axis defined by the vector (1, 1, 1).
+
+**✅ 6. `scale3d(x, y, z)`**
+
+Scales element along the X, Y, and Z axes.
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: scale3d(2, 2, 2);
+}
+```
