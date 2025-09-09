@@ -3607,3 +3607,24 @@ Longhand properties:
 - `animation-fill-mode` — `none`, `forwards`, `backwards`, `both` (controls what happens before/after animation).
 - `animation-play-state` — `running` or `paused`.
 - `animation` — shorthand: `animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
+
+Example (shorthand):
+```css
+.box {
+  animation: enter 600ms cubic-bezier(.2,.8,.2,1) 0s 1 normal forwards;
+}
+```
+
+**4) Keyframes syntax**
+
+`@keyframes name { 0% { ... } 50% { ... } 100% { ... } }`
+You can use `from`/`to` instead of `0%`/`100%`. Use percentages to control intermediate steps.
+
+Example:
+```css
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.08); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+```
