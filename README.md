@@ -3717,3 +3717,76 @@ el.style.animationPlayState = 'paused'; // pause
 el.style.animationPlayState = 'running'; // resume
 ```
 
+**7) Transitions vs Animations vs Transform**
+
+- **Transitions**: animate between two states automatically; simpler.
+- **Animations**: multi-step, can loop, more control.
+- **Transform**: property you should prefer to animate (`transform: translate/scale/rotate`) because they use compositing and don’t trigger layout.
+
+Best properties to animate for performance:
+`transform` and `opacity` (they are handled on the compositor thread).
+
+Avoid animating (if possible): `width`, `height`, `top`, `left`, `margin`, `padding`, `left/right` — those trigger layout/reflow and are expensive.
+
+
+**8) Performance tips**
+
+- Prefer `transform` + `opacity`.
+- Use `will-change` sparingly to hint the browser:
+
+```css
+.animating { will-change: transform, opacity; }
+```
+
+But don’t leave `will-change` permanently — it can consume memory.
+
+Promote to GPU if necessary: `transform: translateZ(0);` — but use only when needed.
+
+- Use `requestAnimationFrame` in JS if you must update styles every frame.
+- Use `prefers-reduced-motion` to respect user preference.
+
+
+**9) Accessibility — prefers-reduced-motion**
+
+Respect users who prefer reduced motion:
+```css
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+```
+
+Better to *turn off* nonessential motion, reduce durations, or use simple fades.
+
+
+
+**10) Chaining, sequencing, negative delays, multiple animations**
+
+- Multiple animations on same element: comma-separated lists for `animation-name`, `animation-duration`, etc.
+- Negative delay: `animation-delay: -0.5s`; starts the animation already part-way through.
+- Sequence: either use `animation-delay` to stagger or listen to `animationed` in JS to start the next animation.
+
+Example multiple animations:
+```css
+.box {
+  animation: wiggle 1s ease infinite, colorShift 3s linear infinite;
+}
+```
+
+
+**11) Events & JS control**
+
+Important DOM events:
+
+- `animationstart` — when animation begins.
+- `animationiteration` — on each loop iteration.
+- `animationend` — when the animation finishes.
+
+Example;
+```js
+el.addEventListener('animationend', () => {
+  console.log('done');
+});
+```
+
+also set `element.style.animation = 'name 1s ease'` to start programmatically.
+
