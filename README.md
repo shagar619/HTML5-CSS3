@@ -3412,3 +3412,27 @@ Example:
 }
 ```
 
+
+### 🎯 CSS 3D Transformations
+
+- CSS 3D transforms let you position and animate elements in three-dimensional space (X, Y, and Z axes).
+- Unlike 2D, we can move forward/backward (Z-axis), creating depth.
+- Controlled with `transform`, `transform-style`, and `perspective`.
+
+#### 📌 Key 3D Transform Functions
+
+**✅ 1. `translate3d(x, y, z)`**
+
+Moves element along X (horizontal), Y (vertical), Z (depth).
+
+Example:
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: translate3d(100px, 50px, 200px);
+}
+```
+
+> - `translate3d(100px, 50px, 200px)` → Moves the element 100px to the right, 50px down, and 200px forward.
