@@ -3790,3 +3790,33 @@ el.addEventListener('animationend', () => {
 
 also set `element.style.animation = 'name 1s ease'` to start programmatically.
 
+
+
+### CSS box-sizing property
+
+The `box-sizing` property defines how the browser calculates the total width and height of an element.
+It determines whether padding and border are included in the element’s size or added on top of it.
+
+#### 📌 Available Values
+
+**✅ 1. `content-box` (default)**
+
+- The width/height applies only to the content box.
+- Padding and border are added outside, increasing the final element size.
+
+Example:
+```css
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 10px solid black;
+  box-sizing: content-box;
+}
+```
+
+📏 Calculation:
+
+- Content: `200px`
+- Padding: `20px + 20px = 40px`
+- Border: `10px + 10px = 20px`
+- Total width = 200 + 40 + 20 = 260px
