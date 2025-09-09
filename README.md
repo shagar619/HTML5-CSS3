@@ -3514,3 +3514,96 @@ Example:
   transform: scale3d(2, 2, 2);
 }
 ```
+
+**🎨 Perspective in 3D**
+
+To make 3D transformations look real, use `perspective`.
+It defines how far the viewer is from the object.
+
+Example:
+```css
+body {
+  perspective: 800px;
+}
+```
+
+- Smaller value (`200px`) → strong depth (dramatic tilt)
+- Larger value (`2000px`) → subtle depth
+
+
+### CSS Animations
+
+CSS gives two main, complementary ways to animate things:
+
+- **Transitions** — animate between two states (good for hover / toggle).
+- **Animations (`@keyframes`)** — create explicit multi-step sequences, loops, complex timing.
+
+
+**1) `Transition` (simple state-based animation)**
+
+Use transition to animate when a property changes (e.g., on `:hover`, or when a class is toggled).
+
+Example:
+```html
+<button class="btn">Hover me</button>
+
+<style>
+.btn {
+  background: #2575fc;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+
+  /* animate transform and background-color when they change */
+  transition: transform 250ms ease, background-color 250ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  background-color: #1a5ad1;
+}
+</style>
+```
+
+
+**2) Keyframe animations (`@keyframes`) — full control**
+
+Define named sequences with `@keyframes`, then assign them via animation properties.
+
+Example:
+```html
+<div class="spinner"></div>
+
+<style>
+.spinner{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: conic-gradient(#4facfe,#00f2fe);
+  animation: spin 1.2s linear infinite;
+}
+
+/* keyframes define the animation steps */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</style>
+```
+
+
+**3) Animation properties (longhand + shorthand)**
+
+Longhand properties:
+
+- `animation-name` — the `@keyframes` identifier.
+- `animation-duration` — how long one cycle lasts (`s` or `ms`).
+- `animation-timing-function` — easing (`linear`, `ease`, `ease-in`, `cubic-bezier(...)`, `steps(n)`).
+- `animation-delay` — wait before starting (can be negative to start mid-animation).
+- `animation-iteration-count` — `1`, `infinite`, or a number.
+- `animation-direction` — `normal`, `reverse`, `alternate`, `alternate-reverse`.
+- `animation-fill-mode` — `none`, `forwards`, `backwards`, `both` (controls what happens before/after animation).
+- `animation-play-state` — `running` or `paused`.
+- `animation` — shorthand: `animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
