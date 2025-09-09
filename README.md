@@ -3820,3 +3820,29 @@ Example:
 - Padding: `20px + 20px = 40px`
 - Border: `10px + 10px = 20px`
 - Total width = 200 + 40 + 20 = 260px
+
+
+**✅ 2. `border-box` (commonly used)**
+
+- The width/height includes content + padding + border.
+- The content area shrinks to fit inside.
+
+Example:
+```css
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+```
+
+📏 Calculation:
+
+- Total box = `200px` (fixed)
+- Padding + border are inside that width.
+- Content width = `200 - 40 - 20 = 140px`.
+
+**✅ 3. inherit**
+
+- Inherits the `box-sizing` value from the parent element.
