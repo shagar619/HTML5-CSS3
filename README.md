@@ -3628,3 +3628,92 @@ Example:
   100% { transform: scale(1); opacity: 1; }
 }
 ```
+
+**5) Timing functions / easing**
+
+- Keywords: `linear`, `ease`, `ease-in`, `ease-out`, ease-in-out.
+- cubic-bezier(x1,y1,x2,y2): precise control. Example: `cubic-bezier(.25,.1,.25,1)` (very common).
+- steps(n, start|end): for discrete jumps — great for sprite animations.
+
+  - `steps(10, end)` steps through 10 frames.
+
+Example: sprite animation with steps
+```css
+.sprite {
+  width: 100px; height: 100px;
+  background: url('sprite.png') 0 0 no-repeat;
+  animation: play 1s steps(10) infinite;
+}
+@keyframes play { to { background-position: -1000px 0; } } /* 10 frames * 100px */
+```
+
+**6) Useful patterns & examples**
+
+A — Entrance animation that stays at final state
+
+Example:
+```css
+.fade-in {
+  animation: fadeIn 500ms ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* `forwards` makes the final state persistent */
+```
+
+B — Flip card (3D, needs `preserve-3d`)
+
+Example:
+```html
+<div class="scene">
+  <div class="card">
+    <div class="front">Front</div>
+    <div class="back">Back</div>
+  </div>
+</div>
+
+<style>
+.scene { perspective: 1000px; width:200px; height:200px; }
+.card {
+  width:100%;height:100%; position:relative;
+  transform-style: preserve-3d;
+  transition: transform 700ms;
+}
+.scene:hover .card { transform: rotateY(180deg); }
+.card > div { position:absolute; inset:0; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; }
+.card .back { transform: rotateY(180deg); }
+</style>
+```
+
+C — Staggered list using CSS variable delay
+
+Example:
+```html
+<ul class="list">
+  <li style="--i:0">Item 1</li>
+  <li style="--i:1">Item 2</li>
+  <li style="--i:2">Item 3</li>
+</ul>
+
+<style>
+.list li {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: slideIn 360ms cubic-bezier(.2,.8,.2,1) forwards;
+  animation-delay: calc(var(--i) * 100ms);
+}
+@keyframes slideIn { to { opacity:1; transform:translateY(0);} }
+</style>
+```
+
+D — Pause/resume with CSS and JS
+
+Example:
+```javascript
+const el = document.querySelector('.spinner');
+el.style.animationPlayState = 'paused'; // pause
+el.style.animationPlayState = 'running'; // resume
+```
+
