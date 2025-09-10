@@ -3915,3 +3915,37 @@ Example:
 
 > 👉 This ensures that the layout adapts to different screen sizes, providing a better user experience.
 
+**✅ 4. Use Flexbox & Grid**
+
+Modern layout systems make responsiveness easy.
+
+Example:
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.item {
+  flex: 1 1 300px; /* Grow, shrink, min-width */
+}
+```
+
+> 👉 This allows you to create flexible layouts that adapt to different screen sizes.
+
+**✅ 5. Make Images Responsive**
+
+Prevent images from breaking layouts.
+
+Example:
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+> 👉 Image scales down but doesn’t overflow.
+
+
+
