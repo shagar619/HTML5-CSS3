@@ -3974,3 +3974,44 @@ Example in Tailwind CSS:
 </div>
 ```
 
+#### 🛠️ Real-World Example (Responsive Card Layout)
+
+```html
+<div class="grid">
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+  <div class="card">Card 3</div>
+</div>
+```
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background: #4facfe;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+```
+
