@@ -3870,3 +3870,48 @@ Example:
 
 > 👉 The container scales with the screen.
 
+
+**✅ 2. Apply Viewport Meta Tag**
+
+Required in HTML `<head>` so browsers scale correctly.
+
+Example:
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+> 👉 This tells the browser to scale the page to the device's width and sets the initial zoom level to 1.0.
+
+**✅ 3. Use Media Queries**
+
+Use CSS media queries to apply different styles based on screen size.
+
+Example:
+```css
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+```
+
+> 👉 This ensures that the layout adapts to different screen sizes, providing a better user experience.
+
