@@ -3948,4 +3948,29 @@ img {
 > 👉 Image scales down but doesn’t overflow.
 
 
+**✅ 6. Use Responsive Typography**
+
+Instead of fixed `px`, use `em`, `rem`, or `clamp()`.
+
+Example:
+```css
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+```
+
+> 👉 Scales between `1.5rem` (mobile) and `3rem` (desktop).
+
+**✅ 7. Use CSS Frameworks (Optional)**
+
+Frameworks like Bootstrap, Tailwind CSS, Material UI provide ready-made responsive classes.
+
+Example in Tailwind CSS:
+```html
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="p-4 bg-blue-300">Item 1</div>
+  <div class="p-4 bg-blue-400">Item 2</div>
+  <div class="p-4 bg-blue-500">Item 3</div>
+</div>
+```
 
