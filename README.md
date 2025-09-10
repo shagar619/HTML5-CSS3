@@ -3846,3 +3846,27 @@ Example:
 **✅ 3. inherit**
 
 - Inherits the `box-sizing` value from the parent element.
+
+
+
+### Make website responsive using CSS
+
+Responsive design means website automatically adjusts to different screen sizes, orientations, and resolutions — providing the best user experience on all devices.
+
+#### 📌 Key Techniques to Make a Website Responsive
+
+**✅ 1. Use Fluid Layouts with Relative Units**
+
+Instead of fixed pixel values (`px`), use percentages, `em`, or `rem`.
+
+Example:
+```css
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+```
+
+> 👉 The container scales with the screen.
+
