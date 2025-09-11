@@ -4129,3 +4129,50 @@ Example:
   align-content: baseline;    /* align items at their baselines */
 }
 ```
+
+**✅ Flex Item Properties**
+
+**1. `order`**
+
+Controls item order (default = 0).
+
+Example:
+```css
+.item {
+  order: 2; /* default → 0 */
+}
+```
+
+**2. `flex-grow`**
+
+Controls how much an item should grow relative to other items (default = 0).
+
+Example:
+```css
+.item {
+  flex-grow: 2; /* default → 0 */
+}
+```
+
+**3. `flex-shrink`**
+
+Controls how much an item should shrink relative to other items (default = 1).
+
+Example:
+```css
+.item {
+  flex-shrink: 2; /* default → 1 */
+}
+```
+
+**4. `flex-basis`**
+
+Controls the initial size of an item (default = auto).
+
+Example:
+```css
+.item {
+  flex-basis: 100px; /* default → auto */
+}
+```
+
