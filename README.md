@@ -4176,3 +4176,51 @@ Example:
 }
 ```
 
+**5. `flex` (Shorthand)**
+
+Combines `flex-grow`, `flex-shrink`, and `flex-basis` into one property (default = 0 1 auto).
+
+Example:
+```css
+.item {
+  flex: 2 2 100px; /* default → 0 1 auto */
+}
+```
+
+### CSS Grid
+
+**CSS Grid Layout** is a two-dimensional layout system in CSS.
+Unlike Flexbox (1D: row OR column), Grid can handle both rows and columns at the same time, making it perfect for web page layouts, dashboards, galleries, etc.
+
+**📌 The Two Parts of CSS Grid**
+
+1. **Grid Container** → Parent element with `display: grid`;.
+2. **Grid Items** → Child elements inside the container.
+
+
+#### ✅ Grid Container Properties
+
+**1. `display: grid;`**
+
+Enables grid layout on the container.
+
+Example:
+```css
+.container {
+  display: grid;
+}
+```
+
+**2. `grid-template-columns` & `grid-template-rows`**
+
+Define the number of columns and rows in the grid, and their sizes.
+
+Example:
+```css
+.container {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px; /* default → 1fr */
+  grid-template-rows: 100px 1fr 100px; /* default → 1fr */
+}
+```
+
