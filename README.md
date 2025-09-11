@@ -4059,3 +4059,40 @@ Example:
 }
 ```
 
+**3. `justify-content;`**
+
+Controls how items are aligned along the main axis (left/right/center).
+
+Example:
+```css
+.container {
+  display: flex;
+  justify-content: center;    /* default → left */
+  justify-content: flex-end;  /* right */
+  justify-content: flex-start; /* left */
+  justify-content: space-between; /* evenly distributed */
+  justify-content: space-around; /* evenly distributed with equal space around */
+  justify-content: space-evenly; /* evenly distributed with equal space around */
+}
+```
+
+**4. `align-items;`**
+
+Controls how items are aligned along the cross axis (top/bottom/center).
+
+Example:
+```css
+.container {
+  display: flex;
+  align-items: center;        /* default → top */
+  align-items: flex-end;      /* bottom */
+  align-items: flex-start;    /* top */
+  align-items: stretch;       /* stretch to fill the container */
+  align-items: baseline;      /* align items at their baselines */
+  align-items: self-start;    /* align items at their start */
+  align-items: self-end;      /* align items at their end */
+  align-items: self-center;   /* align items at their center */
+  align-items: self-baseline; /* align items at their baselines */
+  align-items: self-stretch;  /* stretch items to fill the container */
+}
+```
