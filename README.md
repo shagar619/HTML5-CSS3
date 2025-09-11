@@ -4277,3 +4277,34 @@ Example:
   align-items: space-evenly; /* space between items */
 }
 ```
+
+**6. `justify-content;` (horizontal alignment of items)**
+
+Example:
+```css
+.container {
+  justify-content: start;  /* left */
+  justify-content: end;    /* right */
+  justify-content: center;
+  justify-content: space-between; /* space between items */
+  justify-content: space-around; /* space between items */
+  justify-content: space-evenly; /* space between items */
+}
+```
+
+**7. `align-content;` (vertical alignment of items)**
+
+Example:
+```css
+.container {
+  align-content: start;  /* top */
+  align-content: end;    /* bottom */
+  align-content: center;
+  align-content: stretch; /* default */
+  align-content: baseline; /* vertical alignment of items */
+  align-content: space-between; /* space between items */
+  align-content: space-around; /* space between items */
+  align-content: space-evenly; /* space between items */
+}
+```
+
