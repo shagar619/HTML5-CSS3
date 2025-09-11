@@ -4219,8 +4219,29 @@ Example:
 ```css
 .container {
   display: grid;
-  grid-template-columns: 100px 1fr 200px; /* default → 1fr */
-  grid-template-rows: 100px 1fr 100px; /* default → 1fr */
+  grid-template-columns: 200px 200px 200px; /* 3 fixed columns */
+  grid-template-rows: 100px 150px;          /* 2 rows */
+}
+```
+
+👉 Can use `px`, `%`, `fr` (fractional unit), `auto`.
+
+Example with `fr`:
+```css
+grid-template-columns: 1fr 2fr 1fr; /* middle column is double size */
+```
+
+**3. `gap` (or `row-gap`, `column-gap`)**
+
+Adds space between grid items and between rows/columns.
+
+Example:
+```css
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 100px 150px;
+  gap: 10px; /* space between grid items */
 }
 ```
 
