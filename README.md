@@ -4308,3 +4308,24 @@ Example:
 }
 ```
 
+**8. `grid-template-areas;`**
+
+Create named regions for layouts.
+
+Example:
+```css
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }
+```
+
