@@ -4245,3 +4245,35 @@ Example:
 }
 ```
 
+
+**4. `justify-items;` (horizontal alignment of items)**
+
+Example:
+```css
+.container {
+  justify-items: start;  /* left */
+  justify-items: end;    /* right */
+  justify-items: center;
+  justify-items: stretch; /* default */
+  justify-items: baseline; /* vertical alignment of items */
+  justify-items: space-between; /* space between items */
+  justify-items: space-around; /* space between items */
+  justify-items: space-evenly; /* space between items */
+}
+```
+
+**5. `align-items;` (vertical alignment of items)**
+
+Example:
+```css
+.container {
+  align-items: start;  /* top */
+  align-items: end;    /* bottom */
+  align-items: center;
+  align-items: stretch; /* default */
+  align-items: baseline; /* vertical alignment of items */
+  align-items: space-between; /* space between items */
+  align-items: space-around; /* space between items */
+  align-items: space-evenly; /* space between items */
+}
+```
