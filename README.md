@@ -4329,3 +4329,113 @@ Example:
 .footer  { grid-area: footer; }
 ```
 
+#### ✅ Grid Item Properties
+
+**1. `grid-column` & `grid-row`**
+
+Control where an item starts and ends.
+
+Example:
+```css
+.item {
+  grid-column: 1 / 3; /* start at column 1, end at column 3 */
+  grid-row: 2 / 4;    /* start at row 2, end at row 4 */
+}
+```
+
+**2. `grid-column-start` & `grid-column-end`**
+
+Control where an item starts and ends.
+
+Example:
+```css
+.item {
+  grid-column-start: 1; /* start at column 1 */
+  grid-column-end: 3;   /* end at column 3 */
+}
+```
+
+**3. `grid-row-start` & `grid-row-end`**
+
+Control where an item starts and ends.
+
+Example:
+```css
+.item {
+  grid-row-start: 2; /* start at row 2 */
+  grid-row-end: 4;   /* end at row 4 */
+}
+```
+
+**4. `grid-column-gap` & `grid-row-gap`**
+
+Control the spacing between columns and rows.
+
+Example:
+```css
+.grid-container {
+  grid-column-gap: 20px; /* set the gap between columns */
+  grid-row-gap: 10px;    /* set the gap between rows */
+}
+```
+
+**5. `justify-self` & `align-self`**
+
+Control how an item is aligned within its grid cell.
+
+Example:
+```css
+.item {
+  justify-self: center; /* center the item horizontally within its grid cell */
+  align-self: stretch;  /* stretch the item to fill its grid cell */
+}
+```
+
+**6. `grid-auto-flow`**
+
+Control how new items are placed in the grid.
+
+Example:
+```css
+.grid-container {
+  grid-auto-flow: row; /* place new items in the grid row by row */
+  grid-auto-flow: column; /* place new items in the grid column by column */
+}
+```
+
+**7. `grid-auto-columns` & `grid-auto-rows`**
+
+Control the size of new grid items.
+
+Example:
+```css
+.grid-container {
+  grid-auto-columns: 100px; /* set the size of new items to 100px */
+  grid-auto-rows: 100px;    /* set the size of new items to 100px */
+}
+```
+
+**8. `grid-template-areas`**
+
+Define areas in the grid and assign them to elements.
+
+Example:
+```css
+.grid-container {
+  grid-template-areas: "header header"
+                       "sidebar main"
+                       "footer footer";
+}
+```
+
+**9. `grid-area`**
+
+Define the area for an element in the grid.
+
+Example:
+```css
+.item3 {
+  grid-area: 2 / 1 / 3 / 3; /* row-start / col-start / row-end / col-end */
+}
+```
+
