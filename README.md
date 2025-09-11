@@ -4439,3 +4439,51 @@ Example:
 }
 ```
 
+#### 🛠️ Real-World Example: Responsive Page Layout
+```html
+<div class="container">
+  <header class="header">Header</header>
+  <nav class="sidebar">Sidebar</nav>
+  <main class="main">Main Content</main>
+  <footer class="footer">Footer</footer>
+</div>
+```
+
+```css
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  height: 100vh;
+}
+.header  { grid-area: header; background: #4facfe; }
+.sidebar { grid-area: sidebar; background: #ff6f61; }
+.main    { grid-area: main; background: #43e97b; }
+.footer  { grid-area: footer; background: #f093fb; }
+```
+
+> ✅ Layout adapts to desktop/tablet/mobile easily.
+
+**🌀 Responsive Example with `auto-fit` and `minmax()`**
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #4facfe;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+```
+
+> ✅ Automatically adjusts number of columns depending on screen size.
