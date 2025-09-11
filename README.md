@@ -4015,3 +4015,47 @@ Example in Tailwind CSS:
 }
 ```
 
+### CSS flexbox
+
+**Flexbox (Flexible Box Layout)** is a 1D layout system in CSS that makes it easy to arrange elements in rows or columns with automatic alignment, spacing, and resizing.
+
+👉 Unlike older layout methods (`float`, `inline-block`, `table`), Flexbox is responsive, dynamic, and easy to control.
+
+
+**📌 The Two Parts of Flexbox**
+
+1. **Flex Container** → the parent element with `display: flex;`.
+2. **Flex Items** → the children inside the container.
+
+#### ✅ Flex Container Properties
+
+**1. `display: flex;`**
+
+Enables flexbox on a container.
+
+Example:
+```css
+.container {
+  display: flex;
+}
+```
+
+**2. `flex-direction;`**
+
+Defines the main axis (direction of items).
+
+Example:
+```css
+.container {
+  display: flex;
+  flex-direction: row;       /* default → left to right */
+  flex-direction: row-reverse;
+  flex-direction: column;    /* top to bottom */
+  flex-direction: column-reverse;
+  flex-direction: row wrap;  /* items wrap to the next line */
+  flex-direction: row wrap reverse;
+  flex-direction: column wrap; /* items wrap to the next column */
+  flex-direction: column wrap reverse;
+}
+```
+
