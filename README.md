@@ -4096,3 +4096,36 @@ Example:
   align-items: self-stretch;  /* stretch items to fill the container */
 }
 ```
+
+**5. `flex-wrap;`**
+
+Controls whether items should wrap onto multiple lines.
+
+Example:
+```css
+.container {
+  display: flex;
+  flex-wrap: nowrap;         /* default → wrap */
+  flex-wrap: wrap;           /* wrap */
+  flex-wrap: wrap-reverse;   /* reverse wrap */
+}
+```
+
+**6. `align-content;`**
+
+Controls how items are aligned along the cross axis when there is not enough space to fill the entire cross axis.
+
+Example:
+```css
+.container {
+  display: flex;
+  align-content: flex-start; /* default → center */
+  align-content: flex-end;   /* bottom */
+  align-content: center;     /* center */
+  align-content: space-between; /* evenly distributed */
+  align-content: space-around; /* evenly distributed with equal space around */
+  align-content: space-evenly; /* evenly distributed with equal space around */
+  align-content: stretch;     /* stretch items to fill the container */
+  align-content: baseline;    /* align items at their baselines */
+}
+```
