@@ -4536,3 +4536,21 @@ Then apply it with the `animation` property:
   animation: fadeIn 2s forwards;
 }
 ```
+
+> 📌 `from` = `0%` and `to` = `100%` shorthand.
+
+**✅ Example 2: Bouncing Ball**
+```css
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-100px); }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+```
