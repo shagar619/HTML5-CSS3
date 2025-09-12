@@ -4580,3 +4580,62 @@ They are mostly used to automatically number elements, like lists, headings, sec
 2. Increment the counter with `counter-increment`.
 3. Display the counter with `content: counter(name)` (usually in `::before` or `::after`).
 
+**✅ Example 1: Automatic Numbered Headings**
+```css
+body {
+  counter-reset: section; /* create a counter */
+}
+
+h2::before {
+  counter-increment: section; /* increase by 1 */
+  content: "Section " counter(section) ": "; /* display it */
+}
+```
+
+```html
+<h2>Introduction</h2>
+<h2>Features</h2>
+<h2>Conclusion</h2>
+```
+
+**📌 Output:**
+```less
+Section 1: Introduction
+Section 2: Features
+Section 3: Conclusion
+```
+
+**✅ Example 2: Multi-Level Counters (Nested Lists)**
+```css
+ol {
+  counter-reset: item; /* reset for each list */
+}
+
+li {
+  counter-increment: item;
+}
+
+li::before {
+  content: counters(item, ".") " "; /* nested numbering */
+}
+```
+
+```html
+<ol>
+  <li>HTML
+    <ol>
+      <li>Elements</li>
+      <li>Attributes</li>
+    </ol>
+  </li>
+  <li>CSS</li>
+</ol>
+```
+
+**📌 Output:**
+```css
+1 HTML
+  1.1 Elements
+  1.2 Attributes
+2 CSS
+```
