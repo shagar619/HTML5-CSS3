@@ -4559,16 +4559,24 @@ Then apply it with the `animation` property:
 
 **📌 Animation Properties You Use with `@keyframes`**
 
-animation-name: name of the keyframes
+- `animation-name`: name of the keyframes
+- `animation-duration`: how long it runs (`2s`, `500ms`)
+- `animation-timing-function`: speed curve (`ease`, `linear`, `ease-in-out`)
+- `animation-delay`: wait before starting
+- `animation-iteration-count`: number of repeats (`infinite` allowed)
+- `animation-direction`: `normal`, `reverse`, `alternate`, etc.
+- `animation-fill-mode`: `forwards`, `backwards`, `both` (final state control)
 
-animation-duration: how long it runs (2s, 500ms)
 
-animation-timing-function: speed curve (ease, linear, ease-in-out)
 
-animation-delay: wait before starting
+### 🔢 CSS Counters
 
-animation-iteration-count: number of repeats (infinite allowed)
+**CSS Counters** are like variables in CSS that you can increment and display using CSS rules.
+They are mostly used to automatically number elements, like lists, headings, sections, or figures — without manually writing numbers in HTML.
 
-animation-direction: normal, reverse, alternate, etc.
+**📌 How CSS Counters Work**
 
-animation-fill-mode: forwards, backwards, both (final state control)
+1. Initialize / reset a counter with `counter-reset`.
+2. Increment the counter with `counter-increment`.
+3. Display the counter with `content: counter(name)` (usually in `::before` or `::after`).
+
