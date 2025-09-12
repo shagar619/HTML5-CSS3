@@ -4554,3 +4554,21 @@ Then apply it with the `animation` property:
   animation: bounce 1s infinite;
 }
 ```
+
+> 👉 Cycles colors smoothly.
+
+**📌 Animation Properties You Use with `@keyframes`**
+
+animation-name: name of the keyframes
+
+animation-duration: how long it runs (2s, 500ms)
+
+animation-timing-function: speed curve (ease, linear, ease-in-out)
+
+animation-delay: wait before starting
+
+animation-iteration-count: number of repeats (infinite allowed)
+
+animation-direction: normal, reverse, alternate, etc.
+
+animation-fill-mode: forwards, backwards, both (final state control)
