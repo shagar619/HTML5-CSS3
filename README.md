@@ -4487,3 +4487,18 @@ Example:
 ```
 
 > ✅ Automatically adjusts number of columns depending on screen size.
+
+
+#### 📊 Difference Between **Flexbox** and **Grid**
+
+| Feature              | **Flexbox** 🧩 | **Grid** 🗂️ |
+|----------------------|----------------|--------------|
+| **Layout Type**      | **1D (one-dimensional)** → either **row OR column** | **2D (two-dimensional)** → handles **rows AND columns** |
+| **Best For**         | Smaller components (navbars, buttons, cards, toolbars) | Full page layouts, complex grids, dashboards, galleries |
+| **Main Axis Control** | Yes → `justify-content` controls row/column alignment | Yes + cross-axis control with **grid lines** |
+| **Cross Axis Control** | Limited → `align-items` / `align-content` | Very strong → control exact row & column placement |
+| **Item Placement**   | Automatic order (can use `order`) | Place anywhere with `grid-column`, `grid-row`, or `grid-area` |
+| **Content vs Layout** | Content-first → items push and wrap automatically | Layout-first → define structure (rows/cols) first, then place items |
+| **Responsiveness**   | Great with `flex-wrap` and `gap` | Great with `auto-fit`, `auto-fill`, `minmax()` |
+| **Learning Curve**   | Easier for beginners | More powerful but slightly more complex |
+| **Browser Support**  | Very strong (all modern browsers) | Strong (all modern browsers, but flexbox came earlier) |
