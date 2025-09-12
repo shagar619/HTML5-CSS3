@@ -4508,3 +4508,13 @@ Example:
 
 The `@keyframes` at-rule defines the steps of an animation sequence in CSS.
 It lets you specify how an element should look at different points during an animation (e.g., at 0%, 50%, 100%).
+
+**📌 Syntax**
+```css
+@keyframes animationName {
+  0%   { /* styles at the start */ }
+  50%  { /* styles at halfway point */ }
+  100% { /* styles at the end */ }
+}
+```
+
