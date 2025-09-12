@@ -4524,3 +4524,15 @@ Then apply it with the `animation` property:
   animation: animationName 2s ease-in-out infinite;
 }
 ```
+
+**✅ Example 1: Simple Fade In**
+```css
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.box {
+  animation: fadeIn 2s forwards;
+}
+```
