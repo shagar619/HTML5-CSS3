@@ -4639,3 +4639,34 @@ li::before {
   1.2 Attributes
 2 CSS
 ```
+
+**✅ Example 3: Custom Numbered Figures**
+```css
+body {
+  counter-reset: figure;
+}
+
+figure::before {
+  counter-increment: figure;
+  content: "Figure " counter(figure) ": ";
+  font-weight: bold;
+}
+```
+
+```html
+<figure>Diagram of React Architecture</figure>
+<figure>Virtual DOM Example</figure>
+```
+
+**📌 Output:**
+```less
+Figure 1: Diagram of React Architecture
+Figure 2: Virtual DOM Example
+```
+
+**🎯 Key CSS Counter Functions**
+
+- `counter(name, style?)` → displays a single counter.
+Example: `counter(section, upper-roman)` → I, II, III
+- `counters(name, string, style?)` → displays nested counters separated by a string.
+Example: `counters(item, ".", lower-alpha)` → a, a.b, a.b.c
