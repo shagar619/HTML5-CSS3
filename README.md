@@ -4518,3 +4518,9 @@ It lets you specify how an element should look at different points during an ani
 }
 ```
 
+Then apply it with the `animation` property:
+```css
+.element {
+  animation: animationName 2s ease-in-out infinite;
+}
+```
