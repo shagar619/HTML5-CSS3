@@ -4502,3 +4502,9 @@ Example:
 | **Responsiveness**   | Great with `flex-wrap` and `gap` | Great with `auto-fit`, `auto-fill`, `minmax()` |
 | **Learning Curve**   | Easier for beginners | More powerful but slightly more complex |
 | **Browser Support**  | Very strong (all modern browsers) | Strong (all modern browsers, but flexbox came earlier) |
+
+
+### `@keyframes`
+
+The `@keyframes` at-rule defines the steps of an animation sequence in CSS.
+It lets you specify how an element should look at different points during an animation (e.g., at 0%, 50%, 100%).
