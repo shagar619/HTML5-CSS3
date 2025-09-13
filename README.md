@@ -4702,3 +4702,21 @@ The class selector selects HTML elements with a specific class attribute. It is 
 | **Specificity**      | Lower specificity (0-1-0) | Higher specificity (1-0-0) |
 | **Best Practice**    | Use for **styling groups** of elements | Use for **unique elements** like headers, forms, modals |
 | **Example HTML**     | `<div class="card"></div>` | `<div id="main"></div>` |
+
+
+**✅ Example: Using Class Selector**
+```html
+<div class="button">Save</div>
+<div class="button">Cancel</div>
+```
+
+```css
+.button {
+  background: blue;
+  color: white;
+  padding: 10px;
+}
+```
+
+> 📌 Both Save and Cancel buttons get the same style.
+
