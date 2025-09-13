@@ -4720,3 +4720,17 @@ The class selector selects HTML elements with a specific class attribute. It is 
 
 > 📌 Both Save and Cancel buttons get the same style.
 
+**✅ Example: Using ID Selector**
+```html
+<div id="header">Welcome to My Website</div>
+```
+
+```css
+#header {
+  background: black;
+  color: white;
+  text-align: center;
+}
+```
+
+> 📌 Only the element with `id="header"` gets the style.
