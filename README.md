@@ -4670,3 +4670,35 @@ Figure 2: Virtual DOM Example
 Example: `counter(section, upper-roman)` → I, II, III
 - `counters(name, string, style?)` → displays nested counters separated by a string.
 Example: `counters(item, ".", lower-alpha)` → a, a.b, a.b.c
+
+
+### Difference between `class` and `id` selector
+
+**Id** selector(`“#”`): The **id** selector selects the **id** attribute of an HTML element to select a specific element. An **id** is always unique within the page so it is chosen to select a single, unique element. It is written with the hash character (#), followed by the **id** of the element.
+
+**Syntax:**
+```css
+#element_id_name{
+    // CSS properties
+}
+```
+
+The class selector selects HTML elements with a specific class attribute. It is used with a period character “.” (full stop symbol) followed by the class name.
+
+**Syntax:**
+```css
+.element_class_name{
+    // CSS properties
+}
+```
+
+#### 📊 Difference Between **Class** and **ID** Selector in CSS  
+
+| Feature              | **Class Selector (`.classname`)** | **ID Selector (`#idname`)** |
+|----------------------|-----------------------------------|-----------------------------|
+| **Syntax**           | `.myClass { ... }` | `#myId { ... }` |
+| **Usage**            | Used for **multiple elements** | Used for **one unique element** |
+| **Reusability**      | ✅ Reusable across many elements | ❌ Should be unique (one per page) |
+| **Specificity**      | Lower specificity (0-1-0) | Higher specificity (1-0-0) |
+| **Best Practice**    | Use for **styling groups** of elements | Use for **unique elements** like headers, forms, modals |
+| **Example HTML**     | `<div class="card"></div>` | `<div id="main"></div>` |
