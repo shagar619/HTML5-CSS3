@@ -4783,3 +4783,55 @@ Example: Blogs, e-commerce product lists, search results (Google’s page number
 ```
 
 > 📌 Result: You’ll see a clean pagination bar like **1 2 3 Next** → with hover and active state.
+
+**✅ Example with Flexbox (Center Aligned)**
+```css
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 8px;
+  padding: 0;
+}
+
+.pagination a {
+  padding: 10px 15px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination a:hover {
+  background: #007BFF;
+  color: white;
+}
+```
+
+#### 🛠️ Professional Enhancements
+
+**1. Highlight Current Page**
+```css
+.pagination a.active {
+  background: #007BFF;
+  color: white;
+}
+```
+
+**2. Disabled State for `"Prev"` on first page**
+```css
+.pagination a.disabled {
+  color: #aaa;
+  pointer-events: none;
+  border-color: #eee;
+}
+```
+
+**3. Responsive Pagination**
+Use media queries to collapse into fewer visible links on small screens:
+```css
+@media (max-width: 600px) {
+  .pagination a { padding: 6px 10px; font-size: 14px; }
+}
+```
