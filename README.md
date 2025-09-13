@@ -4835,3 +4835,49 @@ Use media queries to collapse into fewer visible links on small screens:
   .pagination a { padding: 6px 10px; font-size: 14px; }
 }
 ```
+
+
+### CSS Image reflection
+
+CSS Image Reflection creates a mirror-like reflection of an image beneath (or above) it.
+It’s not standard CSS (not part of the W3C spec), but it is supported in WebKit-based browsers (Chrome, Safari, Edge) via the `-webkit-box-reflect` property.
+
+👉 Think of it like your image is sitting on a shiny surface, and you see its reflection below.
+
+**📌 Syntax**
+```css
+-webkit-box-reflect: <direction> <offset> <mask>;
+```
+
+- **direction** → where the reflection is (`below`, `above`, `left`, `right`)
+- **offset** → gap between the image and reflection
+- **mask** → gradient/mask to fade out the reflection
+
+**✅ Example: Basic Reflection Below Image**
+```css
+img {
+  -webkit-box-reflect: below 10px;
+}
+```
+
+> 📌 This places a reflection of the image below it with a `10px` gap.
+
+**✅ Example: Reflection with Fade Effect**
+```css
+img {
+  -webkit-box-reflect: below 5px 
+    linear-gradient(transparent, rgba(0,0,0,0.3));
+}
+```
+
+> 📌 Adds a **fade-out gradient** so the reflection looks realistic.
+
+
+**✅ Example: Reflection on the Right Side**
+```css
+img {
+  -webkit-box-reflect: right 15px;
+}
+```
+
+> 📌 Reflection appears to the right of the image with a `15px` gap.
