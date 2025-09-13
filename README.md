@@ -4734,3 +4734,52 @@ The class selector selects HTML elements with a specific class attribute. It is 
 ```
 
 > 📌 Only the element with `id="header"` gets the style.
+
+### Pagination in CSS
+
+Pagination = dividing content into multiple pages instead of displaying everything at once.
+Example: Blogs, e-commerce product lists, search results (Google’s page numbers at the bottom).
+
+- **Backend/JS** → decides what data appears on each page.
+- **CSS** → styles the pagination controls to make them user-friendly.
+
+**✅ Basic HTML Structure for Pagination**
+```html
+<div class="pagination">
+  <a href="#">&laquo; Prev</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">Next &raquo;</a>
+</div>
+```
+
+**🎨 CSS Styling for Pagination**
+```css
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50; /* active page */
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd; /* hover effect */
+}
+```
+
+> 📌 Result: You’ll see a clean pagination bar like **1 2 3 Next** → with hover and active state.
