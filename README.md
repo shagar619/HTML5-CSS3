@@ -4881,3 +4881,19 @@ img {
 ```
 
 > 📌 Reflection appears to the right of the image with a `15px` gap.
+
+
+### Create multiple columns of text-like newspapers using CSS
+
+The CSS Multi-column Layout Module lets you split text content into multiple columns that flow naturally, just like in newspapers or magazines.
+
+#### 📌 Key Properties
+
+| Property              | Description |
+|------------------------|-------------|
+| `column-count`        | Number of columns (e.g., `3`) |
+| `column-width`        | Ideal width of each column (browser calculates how many fit) |
+| `columns`             | Shorthand for `column-width` and/or `column-count` |
+| `column-gap`          | Space between columns |
+| `column-rule`         | Line (border) between columns (`style`, `color`, `width`) |
+| `column-span`         | Lets an element span across all columns (e.g., headings) |
