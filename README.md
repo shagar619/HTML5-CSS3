@@ -4978,3 +4978,30 @@ Shadows are a fast, powerful way to add depth and focus to UI. CSS gives you thr
 6. `color (recommended)` — usually with alpha: `rgba()` or `hsla()`.
 
 
+multiple shadows separated by commas:
+```css
+.element {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.12),
+    0 6px 20px rgba(0,0,0,0.08); /* second shadow behind the first */
+}
+```
+
+**`text-shadow`**
+
+```css
+/* syntax: text-shadow: offset-x offset-y blur-radius color */
+h1 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* multiple text shadows for glow / outlined text */
+.glow {
+  text-shadow:
+    0 0 2px rgba(255,255,255,0.6),
+    0 4px 10px rgba(0,0,0,0.35);
+}
+```
+
+> `text-shadow` supports multiple shadows; does not accept `inset`.
+
