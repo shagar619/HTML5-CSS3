@@ -5031,3 +5031,21 @@ img {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 ```
+
+**Hover elevation (transition)**
+```css
+.card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+```
+
+**Inset (pressed) effect**
+```css
+.button {
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+```
