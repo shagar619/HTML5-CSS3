@@ -5049,3 +5049,23 @@ img {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
 }
 ```
+
+**Neumorphism (soft, dual-shadow UI)**
+```css
+.neu {
+  background: #e0e5ec;
+  border-radius: 16px;
+  box-shadow:
+    8px 8px 16px rgba(0,0,0,0.12),
+    -8px -8px 16px rgba(255,255,255,0.9);
+}
+```
+
+**Text glow**
+```css
+.title {
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.8), 0 0 8px rgba(255,255,200,0.6);
+}
+```
+
