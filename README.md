@@ -4959,7 +4959,7 @@ Shadows are a fast, powerful way to add depth and focus to UI. CSS gives you thr
 - `text-shadow` — shadows for text.
 - `filter: drop-shadow()` — image-aware shadow that respects transparency.
 
-**`box-shadow` — syntax & parts**
+#### `box-shadow` — syntax & parts
 
 ```css
 /* syntax:
@@ -4987,7 +4987,7 @@ multiple shadows separated by commas:
 }
 ```
 
-**`text-shadow`**
+#### `text-shadow`
 
 ```css
 /* syntax: text-shadow: offset-x offset-y blur-radius color */
@@ -5005,3 +5005,29 @@ h1 {
 
 > `text-shadow` supports multiple shadows; does not accept `inset`.
 
+#### `filter: drop-shadow()` — for images & irregular shapes
+
+`drop-shadow()` applies a shadow to the rendered image keeping alpha/transparency, unlike `box-shadow` which is rectangular (based on element box). Useful for images and SVG.
+
+```css
+img {
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.45));
+}
+```
+> `drop-shadow()` has same values as `box-shadow` except `inset` isn’t supported. Browser support is broad.
+
+
+**Basic card shadow**
+
+```html
+<div class="card">Card</div>
+```
+
+```css
+.card{
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+```
