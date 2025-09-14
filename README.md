@@ -4949,3 +4949,32 @@ The CSS Multi-column Layout Module lets you split text content into multiple col
     </body>
 </html>
 ```
+
+
+### Shadow effect using CSS
+
+Shadows are a fast, powerful way to add depth and focus to UI. CSS gives you three main tools:
+
+- `box-shadow` — shadows for boxes (elements).
+- `text-shadow` — shadows for text.
+- `filter: drop-shadow()` — image-aware shadow that respects transparency.
+
+**`box-shadow` — syntax & parts**
+
+```css
+/* syntax:
+   box-shadow: [inset?] offset-x offset-y [blur-radius]? [spread-radius]? [color]?
+*/
+.box { box-shadow: 10px 8px 20px 0 rgba(0,0,0,0.25); }
+```
+
+**Parts (in order):**
+
+1. `inset (optional)` — makes shadow appear inside the element (inner shadow).
+2. `offset-x` — horizontal offset (positive = right, negative = left).
+3. `offset-y` — vertical offset (positive = down, negative = up).
+4. `blur-radius` (optional, default `0`) — how blurry the shadow is (larger = softer).
+5. `spread-radius` (optional, default `0`) — expands (+) or contracts (−) the shadow size.
+6. `color (recommended)` — usually with alpha: `rgba()` or `hsla()`.
+
+
