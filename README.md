@@ -5069,3 +5069,37 @@ img {
 }
 ```
 
+**Image shadow using `drop-shadow`**
+```css
+.photo {
+  filter: drop-shadow(0 16px 30px rgba(0,0,0,0.4));
+}
+```
+
+Complex shadow behind rounded elements (pseudo-element approach)
+
+If you need a very large blurred glow that should not affect layout, use a `::before`:
+```css
+.btn {
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(20px);
+  opacity: 0.6;
+  z-index: -1;
+}
+```
+
+**Elevation scale (Material-like) — quick reference**
+```css
+.elevation-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+.elevation-2 { box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
+.elevation-3 { box-shadow: 0 8px 20px rgba(0,0,0,0.16); }
+```
