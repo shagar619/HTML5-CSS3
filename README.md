@@ -5139,3 +5139,38 @@ text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 /* image drop-shadow */
 filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 ```
+
+
+### CSS Priority Levels
+
+When multiple CSS rules apply to the same element, the browser decides which one wins using the following hierarchy:
+
+**1. Source Order (Last Rule Wins)**
+
+If two rules have the same specificity, the one defined later in the stylesheet wins.
+
+```css
+p {
+  color: blue;   /* First */
+}
+p {
+  color: red;    /* Later overrides */
+}
+```
+
+> 👉 Result: The paragraph will be red.
+
+
+**2. Specificity (Selector Strength)**
+
+Each selector has a specificity score:
+
+- Inline styles: highest specificity (except !important)
+
+- ID selectors: high (#header)
+
+C- lass, attributes, pseudo-classes: medium (.btn, [type="text"], :hover)
+
+- Element selectors: low (div, p, h1)
+
+- Universal selector *: lowest
