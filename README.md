@@ -5163,14 +5163,85 @@ p {
 
 **2. Specificity (Selector Strength)**
 
-Each selector has a specificity score:
+**Each selector has a specificity score:**
 
-- Inline styles: highest specificity (except !important)
+- Inline styles: highest specificity (except `!important`)
+- ID selectors: high (`#header`)
+- C- lass, attributes, pseudo-classes: medium (`.btn`, `[type="text"]`, `:hover`)
+- Element selectors: low (`div`, p, h1)
+- Universal selector `*`: lowest
 
-- ID selectors: high (#header)
+**➡️ Formula (ABC):**
 
-C- lass, attributes, pseudo-classes: medium (.btn, [type="text"], :hover)
+- A = number of inline styles
+- B = number of IDs
+- C = number of classes, attributes, pseudo-classes
+- D = number of elements, pseudo-elements
 
-- Element selectors: low (div, p, h1)
+Example:
+```css
+p { color: green; }        /* Specificity = 0-0-0-1 */
+.text { color: blue; }     /* Specificity = 0-0-1-0 */
+#main { color: red; }      /* Specificity = 0-1-0-0 */
+```
 
-- Universal selector *: lowest
+> 👉 Result: The element inside `#main` is red.
+
+**Origin of Styles**
+
+CSS has different sources, and their priority is:
+
+1. User `!important` styles (e.g., accessibility settings in browser).
+2. Author `!important` styles (styles you write with `!important`).
+3. Author styles (normal external/internal/inline styles you write).
+4. User styles (custom user-defined CSS in browsers).
+5. Browser (UA) default styles (e.g., blue underlined links).
+
+
+**Inline Styles**
+
+Inline styles written directly in the HTML `style` attribute override any external or internal CSS (unless overridden by `!important`).
+
+```html
+<p style="color: orange;">Hello</p>
+```
+
+> 👉 Always orange, unless inline is overridden by `!important`.
+
+**`!important`**
+
+The ultimate override. It wins over inline styles, IDs, classes, and element selectors.
+```css
+p { color: red !important; }
+```
+
+Even if you set inline style:
+```html
+<p style="color: blue;">Hello</p>
+```
+
+> 👉 The result will be red, because of `!important`.
+
+#### 📊 CSS Specificity Score Examples
+
+| Selector                        | Specificity Score |
+|---------------------------------|-------------------|
+| `p`                             | 0-0-0-1 |
+| `.btn`                          | 0-0-1-0 |
+| `#header`                       | 0-1-0-0 |
+| `ul li a`                       | 0-0-0-3 |
+| `div#nav .menu li.active a`     | 0-1-2-3 |
+| Inline Style (`style=""`)       | 1-0-0-0 |
+| `!important`                    | Overrides all |
+
+
+#### 📌 Final Priority Pyramid
+
+**From lowest → highest priority:**
+
+1. Browser default styles
+2. External / Internal CSS (element selectors)
+3. Class, attribute, pseudo-class selectors
+4. ID selectors
+5. Inline styles
+6. !important styles (highest)
