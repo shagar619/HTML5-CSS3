@@ -4897,3 +4897,55 @@ The CSS Multi-column Layout Module lets you split text content into multiple col
 | `column-gap`          | Space between columns |
 | `column-rule`         | Line (border) between columns (`style`, `color`, `width`) |
 | `column-span`         | Lets an element span across all columns (e.g., headings) |
+
+**Example:**
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Column-count property</title>
+        <style>
+        .geeks_content {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            padding-top:35px;
+            text-align:justify;
+        }
+        .gfg {
+            text-align:center;
+            font-size:40px;
+            font-weight:bold;
+            color:green;
+        }
+        .geeks {
+            text-align:center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="gfg">GeeksforGeeks</div>
+        <div class = "geeks">A computer science portal for geeks</div>
+        <div class="geeks_content">
+            Sudo Placement: Prepare for the Recruitment
+            drive of product based companies like Microsoft,
+            Amazon, Adobe etc with a free online placement
+            preparation course. The course focuses on
+            various MCQ's & Coding question likely to be
+            asked in the interviews & make your upcoming 
+            placement season efficient and successful. 
+            Placement preparation solely depends on the
+            company for which you are preparing. There 
+            are basically three different categories 
+            into which we can divide the companies visiting 
+            campuses for placements based on their recruitment 
+            process. Mass Recruiters, Tech Giants, Others / Start-ups
+            Companies belonging to the above categories have 
+            their own recruitment process. In this course, we
+            will try to cover every possible detail required
+            to know for cracking interview of the companies 
+            falling in each of the above categories.
+        </div>
+    </body>
+</html>
+```
