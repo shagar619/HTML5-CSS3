@@ -5103,3 +5103,39 @@ If you need a very large blurred glow that should not affect layout, use a `::be
 .elevation-2 { box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
 .elevation-3 { box-shadow: 0 8px 20px rgba(0,0,0,0.16); }
 ```
+
+**Accessibility & UX considerations**
+
+- Don’t replace keyboard focus outline with only subtle shadows. If you use `box-shadow` for focus, ensure it’s very visible to keyboard users:
+```css
+:focus {
+  outline: none; /* OK if you replace it */
+  box-shadow: 0 0 0 3px rgba(21,156,228,0.6);
+}
+```
+
+- **Consider** `prefers-reduced-motion` when animating shadows: reduce or disable certain motion for users who opt out.
+- **Contrast matters** — shadows shouldn’t reduce legibility for text.
+
+
+**Quick cheat-sheet**
+```css
+/* soft card */
+box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+
+/* pronounced drop */
+box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+
+/* inner depressed */
+box-shadow: inset 0 4px 8px rgba(0,0,0,0.15);
+
+/* layered depth */
+box-shadow: 0 2px 6px rgba(0,0,0,0.12),
+            0 10px 30px rgba(0,0,0,0.08);
+
+/* text soft shadow */
+text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
+/* image drop-shadow */
+filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+```
