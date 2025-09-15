@@ -5269,3 +5269,13 @@ input[required] {
 
 > ✅ All required inputs get a red border.
 
+**2. `[attr="value"]` — Exact Match**
+
+Selects elements with an attribute equal to a specific value.
+```css
+input[type="text"] {
+  background: #f9f9f9;
+}
+```
+
+> ✅ Applies only to `<input type="text">`.
