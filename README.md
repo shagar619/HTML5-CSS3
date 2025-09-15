@@ -5258,3 +5258,14 @@ element[attribute] { ... }
 
 #### 📌 Types of Attribute Selectors
 
+**1. `[attr]` — Attribute Exists**
+
+Selects elements that have a given attribute (regardless of its value).
+```css
+input[required] {
+  border: 2px solid red;
+}
+```
+
+> ✅ All required inputs get a red border.
+
