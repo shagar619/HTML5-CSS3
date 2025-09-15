@@ -5302,3 +5302,65 @@ Selects elements with attribute equal to `value` or starting with `value-`.
 
 > ✅ Matches `class="lang"` or `class="lang-en"`, but not `class="language"`.
 
+**5. `[attr^="value"]` — Starts With**
+
+Selects elements whose attribute value begins with specific text.
+```css
+a[href^="https"] {
+  color: green;
+}
+```
+
+> ✅ Matches `<a href="https://...">`.
+
+**6. `[attr$="value"]` — Ends With**
+
+Selects elements whose attribute value ends with specific text.
+```css
+a[href$=".pdf"]::after {
+  content: " 📄";
+}
+```
+
+> ✅ Adds an icon after links to PDF files.
+
+**7. `[attr*="value"]` — Contains**
+
+Selects elements whose attribute contains specific text (substring).
+```css
+input[name*="user"] {
+  background: lightyellow;
+}
+```
+
+> ✅ Matches `<input name="username">`,`<input name="user_email">`.
+
+
+#### 🛠️ Example — Styling Forms
+```css
+/* Highlight required inputs */
+input[required] {
+  border: 2px solid red;
+}
+
+/* Different styles for input types */
+input[type="email"] {
+  border-color: blue;
+}
+input[type="password"] {
+  border-color: green;
+}
+
+/* Links to external sites */
+a[href^="http"] {
+  color: purple;
+}
+
+/* Links to files */
+a[href$=".pdf"]::after {
+  content: " (PDF)";
+  font-size: 0.9em;
+}
+```
+
+
