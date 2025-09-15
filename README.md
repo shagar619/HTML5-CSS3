@@ -5244,4 +5244,17 @@ Even if you set inline style:
 3. Class, attribute, pseudo-class selectors
 4. ID selectors
 5. Inline styles
-6. !important styles (highest)
+6. `!important` styles (highest)
+
+
+### Attribute Selectors in CSS
+
+Attribute selectors let you style HTML elements based on their attributes and attribute values, without needing extra classes or IDs.
+
+Basic Syntax:
+```css
+element[attribute] { ... }
+```
+
+#### 📌 Types of Attribute Selectors
+
