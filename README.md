@@ -5279,3 +5279,15 @@ input[type="text"] {
 ```
 
 > ✅ Applies only to `<input type="text">`.
+
+**3. `[attr~="value"]` — Word Match**
+
+Selects elements whose attribute contains a word (space-separated).
+```css
+[class~="btn"] {
+  padding: 10px;
+}
+```
+
+> ✅ Matches `<div class="btn primary">` but not `<div class="button">`.
+
