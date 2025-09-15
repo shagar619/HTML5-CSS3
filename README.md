@@ -5291,3 +5291,14 @@ Selects elements whose attribute contains a word (space-separated).
 
 > ✅ Matches `<div class="btn primary">` but not `<div class="button">`.
 
+**4. `[attr|="value"]` — Value or Value- Prefix**
+
+Selects elements with attribute equal to `value` or starting with `value-`.
+```css
+[class|="lang"] {
+  color: blue;
+}
+```
+
+> ✅ Matches `class="lang"` or `class="lang-en"`, but not `class="language"`.
+
