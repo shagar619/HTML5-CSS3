@@ -1026,6 +1026,21 @@ Example:
 - **Custom elements** - These are JavaScript APIs that help in defining custom elements and their behavior.
 - **Shadow DOM** - These are JavaScript APIs that attach an encapsulated shadow DOM tree to an element to keep the element’s features private and unaffected by other parts.
 
+```html
+<!DOCTYPE html>
+<html>
+ <head>
+<meta charset="utf-8">
+<title>composed and composedPath demo</title>
+<script src="main.js" defer></script>
+ </head>
+ <body>
+<h1><code>composed</code> and <code>composedPath</code> demo</h1>
+<open-shadow text="I have an open shadow root"></open-shadow>
+<closed-shadow text="I have a closed shadow root"></closed-shadow>
+ </body>
+</html>
+```
 
 <div align="center" style="margin-top: 40px; margin-bottom: 40px;">
   <h1>CSS3</h1>
