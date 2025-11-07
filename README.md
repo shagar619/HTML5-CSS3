@@ -1022,6 +1022,10 @@ Example:
 ```
 
 
+### Web Components and it’s usage
+- **Custom elements** - These are JavaScript APIs that help in defining custom elements and their behavior.
+- **Shadow DOM** - These are JavaScript APIs that attach an encapsulated shadow DOM tree to an element to keep the element’s features private and unaffected by other parts.
+
 
 <div align="center" style="margin-top: 40px; margin-bottom: 40px;">
   <h1>CSS3</h1>
