@@ -1071,6 +1071,40 @@ document.querySelector('html').addEventListener('click', e => {
 });
 ```
 
+- **HTML templates** - The markup templates are written using `<template>` and `<slot>` elements which can be reused multiple times as the basis of a custom element's structure.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Simple template</title>
+ <script src="main.js"></script>
+</head>
+<body>
+ <h1>Simple template</h1>
+ <template id="my-paragraph">
+<style>
+  p {
+    color: white;
+    background-color: #666;
+    padding: 5px;
+  }
+</style>
+<p><slot name="my-text">My default text</slot></p>
+ </template>
+ <my-paragraph>
+<span slot="my-text">Let's have some different text!</span>
+ </my-paragraph>
+ <my-paragraph>
+<ul slot="my-text">
+  <li>Let's have some different text!</li>
+  <li>In a list!</li>
+</ul>
+ </my-paragraph>
+</body>
+</html>
+```
 
 
 <div align="center" style="margin-top: 40px; margin-bottom: 40px;">
